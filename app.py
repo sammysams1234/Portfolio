@@ -127,17 +127,19 @@ This project not only showcases my ability to quickly adapt and learn new techno
             st_lottie(lottie_powerapps, height=300)
     with col2:
         st.write("""
-I identified that manually monitoring competitive pricing on affiliate sites was not only time-consuming but also prone to errors. To solve this, I engineered an automated pricing solution using Python and collaborated with a team to design a scalable system. By leveraging Selenium and Beautiful Soup, the system scrapes affiliate websites, structures the extracted data into a tabular format, and stores it in BigQuery. This automation significantly reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies.
+    # Pricing Automation & Process Optimization
 
-Key Highlights:
+    I identified that manually monitoring competitive pricing on affiliate sites was not only time-consuming but also prone to errors. To solve this, I engineered an automated pricing solution using Python and collaborated with a team to design a scalable system. By leveraging Selenium and Beautiful Soup, the system scrapes affiliate websites, structures the extracted data into a tabular format, and stores it in BigQuery. This automation significantly reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies.
 
--Automated Data Collection: Utilized Selenium and Beautiful Soup to scrape affiliate websites, transforming unstructured data into actionable insights.
--Efficient Data Management: Structured and stored data in BigQuery, enabling streamlined analysis and decision-making.
--Internal Process Enhancements: Developed Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base.
--HR Data Insights: Created ad hoc Python solutions for processing HR file data, providing strategic insights to better position our workforce.
--Synthetic Data Generation: Employed the Fakerr library to generate realistic synthetic datasets for testing and development, enhancing system robustness while ensuring data privacy.
+    ## Key Highlights
 
-This project demonstrates my capability to create innovative, efficient solutions that drive operational excellence and strategic growth.
+    - **Automated Data Collection:** Utilized Selenium and Beautiful Soup to scrape affiliate websites, transforming unstructured data into actionable insights.
+    - **Efficient Data Management:** Structured and stored data in BigQuery, enabling streamlined analysis and decision-making.
+    - **Internal Process Enhancements:** Developed Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base.
+    - **HR Data Insights:** Created ad hoc Python solutions for processing HR file data, providing strategic insights to better position our workforce.
+    - **Synthetic Data Generation:** Employed the Fakerr library to generate realistic synthetic datasets for testing and development, enhancing system robustness while ensuring data privacy.
+
+    This project demonstrates my capability to create innovative, efficient solutions that drive operational excellence and strategic growth.
     """
                 )
     st.markdown("---")
