@@ -77,12 +77,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
       <div class="event">
         <div class="circle"></div>
         <h4>2022</h4>
-        <p>Started Vodafone</p>
+        <p>Started Vodafone as a Data Analyst Apprentice</p>
       </div>
       <div class="event">
         <div class="circle"></div>
         <h4>2025</h4>
-        <p>Due to graduate</p>
+        <p>Due to graduate with Digital Solutions specialising in D&A degree</p>
       </div>
     </div>
     """
