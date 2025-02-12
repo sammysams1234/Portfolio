@@ -112,7 +112,7 @@ Automated Updates: Implemented a weekly update pipeline with Vertex AI Kubernete
 UI & Framework Evolution: Initially crafted the user interface with Streamlit, then transitioned to a more flexible and scalable solution with Flask, HTML, and CSS—expanding my expertise with new frameworks.
 Emerging Technologies: Explored the capabilities of large language models (LLMs) throughout the project, deepening my understanding and integration of advanced AI techniques.
 This project not only showcases my ability to quickly adapt and learn new technologies but also highlights my proficiency in creating scalable, production-level applications in a dynamic, cloud-based environment.
-    
+    """
     st.markdown("---")
     
     # ----------------------------------------
