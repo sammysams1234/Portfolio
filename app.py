@@ -12,17 +12,15 @@ def load_lottieurl(url: str):
 # Set up the page configuration
 st.set_page_config(page_title="My Portfolio", layout="wide", initial_sidebar_state="expanded")
 
-# ---------------------------
-# Define Page Functions
-# ---------------------------
 def home_page():
     st.title("My Portfolio")
     st.write("Hi and welcome to my portfolio! I am Samuel Turner, a Level 6 Data Analyst Apprentice at Vodafone")
     
     st.subheader("About Me")
+    # Two columns: one for the image, one for the bio text.
     col1, col2 = st.columns([1, 2])
     with col1:
-        # Create nested columns within the left column to center the image
+        # Center the image using nested columns
         left, center, right = st.columns([1, 1, 1])
         with center:
             st.image("samuel_pfp.png", width=350)
@@ -31,65 +29,65 @@ def home_page():
 I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have gained 2.5 years of experience since joining the company at the age of 18. Starting my career at such a prominent organisation immediately after completing my A-Levels presented its challenges, but I embraced them with determination. I was eager to pursue further academic studies toward a degree while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship is determined by the commitment of the individual, and my journey has exemplified this. I invite you to review my project portfolio to gain insight into the diverse projects I have contributed to during my apprenticeship and to appreciate the breadth of my professional skillset.
         """)
 
-    # Horizontal timeline inserted below the bio
-# Horizontal timeline inserted below the bio
-st.markdown("""
-<style>
-.timeline-horizontal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-  position: relative;
-}
-.timeline-horizontal::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  border-top: 2px solid #FF9F55;
-  transform: translateY(-50%);
-}
-.timeline-event {
-  background: #fff;
-  padding: 10px;
-  text-align: center;
-  position: relative;
-  flex: 1;
-}
-.timeline-event:not(:last-child) {
-  margin-right: 10px;
-}
-.timeline-event::before {
-  content: '';
-  display: block;
-  margin: 0 auto;
-  width: 20px;
-  height: 20px;
-  background: #FF9F55;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  position: relative;
-  top: -10px;
-}
-</style>
-<div class="timeline-horizontal">
-  <div class="timeline-event">
-    <h4>2020</h4>
-    <p>Started A Levels<br>(Physics, Film Studies, IT)</p>
-  </div>
-  <div class="timeline-event">
-    <h4>2022</h4>
-    <p>Started Vodafone</p>
-  </div>
-  <div class="timeline-event">
-    <h4>2025</h4>
-    <p>Due to Graduate</p>
-  </div>
-</div>
-""", unsafe_allow_html=True)
-
+    # Horizontal timeline placed below the bio
+    timeline_html = """
+    <style>
+    .timeline {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        right: 5%;
+        height: 2px;
+        background: #ddd;
+        z-index: 0;
+    }
+    .timeline .event {
+        position: relative;
+        text-align: center;
+        flex: 1;
+        z-index: 1;
+    }
+    .timeline .event .circle {
+        width: 20px;
+        height: 20px;
+        background: #FF9F55;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+    }
+    /* Move the year up slightly */
+    .timeline .event h4 {
+        margin-top: -10px;
+    }
+    </style>
+    <div class="timeline">
+      <div class="event">
+        <div class="circle"></div>
+        <h4>2020</h4>
+        <p>Started A Levels - Physics, Film Studies, IT</p>
+      </div>
+      <div class="event">
+        <div class="circle"></div>
+        <h4>2022</h4>
+        <p>Started Vodafone</p>
+      </div>
+      <div class="event">
+        <div class="circle"></div>
+        <h4>2025</h4>
+        <p>Due to graduate</p>
+      </div>
+    </div>
+    """
+    st.markdown(timeline_html, unsafe_allow_html=True)
+    
     st.markdown("---")
     
     st.title("My Projects as an Apprentice")
