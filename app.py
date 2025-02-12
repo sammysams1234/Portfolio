@@ -165,7 +165,7 @@ Lastly, in the Value Tracker Project, I developed a solution that integrated wit
         st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
         lottie_linkedin = load_lottieurl("https://lottie.host/c2d857da-a9fc-4986-8f61-15e77bc42c25/eUjrL2Ocmq.json")
         if lottie_linkedin:
-            st_lottie(lottie_linkedin, height=250)
+            st_lottie(lottie_linkedin, height=220)
         st.markdown("<h3><a href='https://www.linkedin.com/in/samuel-turner-b6b5b0251/' target='_blank'>LinkedIn Profile</a></h3>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
     
