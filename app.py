@@ -32,66 +32,63 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         """)
 
     # Horizontal timeline inserted below the bio
-    st.markdown("""
-    <style>
-    .timeline-horizontal {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 20px 0;
-      position: relative;
-    }
-    .timeline-horizontal::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      border-top: 2px solid #FF9F55;
-      transform: translateY(-50%);
-    }
-    .timeline-event {
-      background: #fff;
-      padding: 10px;
-      text-align: center;
-      position: relative;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 100px;
-    }
-    .timeline-event:not(:last-child) {
-      margin-right: 10px;
-    }
-    .timeline-event::before {
-      content: '';
-      display: block;
-      margin: 0 auto;
-      width: 20px;
-      height: 20px;
-      background: #FF9F55;
-      border: 4px solid #fff;
-      border-radius: 50%;
-      position: relative;
-      top: -10px;
-    }
-    </style>
-    <div class="timeline-horizontal">
-      <div class="timeline-event">
-        <h4>2020</h4>
-        <p>Started A Levels<br>(Physics, Film Studies, IT)</p>
-      </div>
-      <div class="timeline-event">
-        <h4>2022</h4>
-        <p>Started Vodafone</p>
-      </div>
-      <div class="timeline-event">
-        <h4>2025</h4>
-        <p>Due to Graduate</p>
-      </div>
-    </div>
-    """, unsafe_allow_html=True)
+# Horizontal timeline inserted below the bio
+st.markdown("""
+<style>
+.timeline-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+.timeline-horizontal::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px solid #FF9F55;
+  transform: translateY(-50%);
+}
+.timeline-event {
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+.timeline-event:not(:last-child) {
+  margin-right: 10px;
+}
+.timeline-event::before {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  background: #FF9F55;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+}
+</style>
+<div class="timeline-horizontal">
+  <div class="timeline-event">
+    <h4>2020</h4>
+    <p>Started A Levels<br>(Physics, Film Studies, IT)</p>
+  </div>
+  <div class="timeline-event">
+    <h4>2022</h4>
+    <p>Started Vodafone</p>
+  </div>
+  <div class="timeline-event">
+    <h4>2025</h4>
+    <p>Due to Graduate</p>
+  </div>
+</div>
+""", unsafe_allow_html=True)
 
     st.markdown("---")
     
