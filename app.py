@@ -160,12 +160,10 @@ Lastly, in the Value Tracker Project, I developed a solution that integrated wit
     st.title("Contact Me")
     
     # Create two equal columns for contact information
-    contact_cols = st.columns(2)
+    contact_cols = st.columns(1)
     with contact_cols[0]:
         st.markdown("<h3><a href='https://www.linkedin.com/in/samuel-turner-b6b5b0251/' target='_blank'>LinkedIn Profile</a></h3>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
-    
-    with contact_cols[1]:
         st.markdown("<h3><a href='https://github.com/sammysams1234' target='_blank'>GitHub Profile</a></h3>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
