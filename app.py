@@ -25,7 +25,7 @@ def home_page():
         # Create nested columns within the left column to center the image
         left, center, right = st.columns([1, 2, 1])
         with center:
-            st.image("samuel_pfp.png", width=300)
+            st.image("samuel_pfp.png", width=350)
     with col2:
         st.write("""
 I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have gained 2.5 years of experience since joining the company at the age of 18. Starting my career at such a prominent organisation immediately after completing my A-Levels presented its challenges, but I embraced them with determination. I was eager to pursue further academic studies toward a degree while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship is determined by the commitment of the individual, and my journey has exemplified this. I invite you to review my project portfolio to gain insight into the diverse projects I have contributed to during my apprenticeship and to appreciate the breadth of my professional skillset.
