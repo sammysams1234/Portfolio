@@ -127,11 +127,19 @@ This project not only showcases my ability to quickly adapt and learn new techno
             st_lottie(lottie_powerapps, height=300)
     with col2:
         st.write("""
-In the Pricing Automation Project, I recognized that manually monitoring competitive pricing on affiliate sites was labor-intensive, error-prone, and time-consuming. To address this challenge, I developed an automated pricing solution using Python and collaborated closely with fellow developers to design and implement the system. This solution leverages Selenium and Beautiful Soup to scrape affiliate websites, transforming the extracted data into a structured, tabular format that is then stored in BigQuery. As a result, the project achieved significant labor cost savings, reduced human error, and unlocked new revenue opportunities through more informed pricing strategies.
+I identified that manually monitoring competitive pricing on affiliate sites was not only time-consuming but also prone to errors. To solve this, I engineered an automated pricing solution using Python and collaborated with a team to design a scalable system. By leveraging Selenium and Beautiful Soup, the system scrapes affiliate websites, structures the extracted data into a tabular format, and stores it in BigQuery. This automation significantly reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies.
 
-Additionally, I implemented several internal process improvements. I developed Python-based automation scripts to clean up and organize Confluence documentation, systematically removing outdated content to maintain an accurate and efficient knowledge base. I also created ad hoc Python solutions for processing HR file data, which provided valuable insights to better position our workforce against industry consultancies. Finally, I employed the Fakerr library to generate synthetic data for testing and development, simulating realistic datasets that enhanced system robustness while ensuring data privacy.
-        """)
-    
+Key Highlights:
+
+-Automated Data Collection: Utilized Selenium and Beautiful Soup to scrape affiliate websites, transforming unstructured data into actionable insights.
+-Efficient Data Management: Structured and stored data in BigQuery, enabling streamlined analysis and decision-making.
+-Internal Process Enhancements: Developed Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base.
+-HR Data Insights: Created ad hoc Python solutions for processing HR file data, providing strategic insights to better position our workforce.
+-Synthetic Data Generation: Employed the Fakerr library to generate realistic synthetic datasets for testing and development, enhancing system robustness while ensuring data privacy.
+
+This project demonstrates my capability to create innovative, efficient solutions that drive operational excellence and strategic growth.
+    """
+                )
     st.markdown("---")
     
     # ----------------------------------------
