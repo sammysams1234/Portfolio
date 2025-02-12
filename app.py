@@ -162,18 +162,10 @@ Lastly, in the Value Tracker Project, I developed a solution that integrated wit
     # Create two equal columns for contact information
     contact_cols = st.columns(2)
     with contact_cols[0]:
-        st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
-        lottie_linkedin = load_lottieurl("https://lottie.host/c2d857da-a9fc-4986-8f61-15e77bc42c25/eUjrL2Ocmq.json")
-        if lottie_linkedin:
-            st_lottie(lottie_linkedin, height=200)
         st.markdown("<h3><a href='https://www.linkedin.com/in/samuel-turner-b6b5b0251/' target='_blank'>LinkedIn Profile</a></h3>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
     
     with contact_cols[1]:
-        st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
-        lottie_github = load_lottieurl("https://lottie.host/94a8510d-a206-46f2-a0c5-2e34cf76437d/A3LxSpCFuF.json")
-        if lottie_github:
-            st_lottie(lottie_github, height=150)
         st.markdown("<h3><a href='https://github.com/sammysams1234' target='_blank'>GitHub Profile</a></h3>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
