@@ -173,7 +173,7 @@ Lastly, in the Value Tracker Project, I developed a solution that integrated wit
         st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
         lottie_github = load_lottieurl("https://lottie.host/94a8510d-a206-46f2-a0c5-2e34cf76437d/A3LxSpCFuF.json")
         if lottie_github:
-            st_lottie(lottie_github, height=150)
+            st_lottie(lottie_github, height=200)
         st.markdown("<h3><a href='https://github.com/sammysams1234' target='_blank'>GitHub Profile</a></h3>", unsafe_allow_html=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
