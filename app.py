@@ -23,7 +23,7 @@ def home_page():
     col1, col2 = st.columns([1, 2])
     with col1:
         # Create nested columns within the left column to center the image
-        left, center, right = st.columns([1, 2, 1])
+        left, center, right = st.columns([1, 1, 1])
         with center:
             st.image("samuel_pfp.png", width=350)
     with col2:
