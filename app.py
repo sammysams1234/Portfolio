@@ -109,7 +109,7 @@ Lastly, in the Value Tracker Project, I developed a solution that integrated wit
         if lottie_linkedin:
             st_lottie(lottie_linkedin, height=200)
     with linkedin_cols[1]:
-        st.markdown("### [LinkedIn Profile](https://www.linkedin.com/in/samuelturner)")
+        st.markdown("### [LinkedIn Profile](https://www.linkedin.com/in/samuel-turner-b6b5b0251/)")
     
     # GitHub contact row
     github_cols = st.columns([1, 3])
