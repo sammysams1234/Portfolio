@@ -103,14 +103,15 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write("""
-In the Gemini Chatbot Web Application Project, I developed a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, despite having no prior coding experience. The application serves as an intelligent document scanner for company files by employing text vectorization for similarity searching, which enables rapid, query-based text retrieval.
+I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries.
 
-For the toolchain and deployment, I utilized GitHub for source code storage and version control, while Cloud Build containerized the application through YAML configurations and Dockerfiles. The final container was then hosted on Cloud Run, secured behind a custom company DNS.
+Key Technical Highlights:
 
-To ensure the knowledge base remained up-to-date, I established a weekly update mechanism using a Vertex AI Kubernetes pipeline. This process leveraged Beautiful Soup and the Requests library to extract HTML content from Confluence pages, with the data subsequently loaded into BigQuery.
-
-Throughout the project, I explored the emerging capabilities of large language models (LLMs) and deepened my understanding of their functionality. Initially, I implemented a user interface using Streamlit, but later transitioned to a more flexible solution with Flask, HTML, and CSS, which required me to master new frameworks.
-        """)
+Version Control & Deployment: Managed source code with GitHub and utilized Cloud Build to containerize the application using YAML configurations and Dockerfiles. Successfully deployed the container on Cloud Run, secured behind a custom company DNS.
+Automated Updates: Implemented a weekly update pipeline with Vertex AI Kubernetes, using Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery. This ensures the knowledge base remains current.
+UI & Framework Evolution: Initially crafted the user interface with Streamlit, then transitioned to a more flexible and scalable solution with Flask, HTML, and CSS—expanding my expertise with new frameworks.
+Emerging Technologies: Explored the capabilities of large language models (LLMs) throughout the project, deepening my understanding and integration of advanced AI techniques.
+This project not only showcases my ability to quickly adapt and learn new technologies but also highlights my proficiency in creating scalable, production-level applications in a dynamic, cloud-based environment.
     
     st.markdown("---")
     
