@@ -135,7 +135,7 @@ Additionally, I implemented several internal process improvements. I developed P
     # ----------------------------------------
     # Project: PowerApps & PowerAutomate Tools
     # ----------------------------------------
-    st.subheader("PowerApps & PowerAutomate Tools")
+    st.subheader("PowerApps & PowerAutomate Projects")
     col1, col2 = st.columns([1, 2])
     with col1:
         lottie_python = load_lottieurl("https://lottie.host/a8ca184c-72c4-4f0a-8167-f6e0546e1f7b/oBC8dtGBrA.json")
