@@ -30,7 +30,69 @@ def home_page():
         st.write("""
 I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have gained 2.5 years of experience since joining the company at the age of 18. Starting my career at such a prominent organisation immediately after completing my A-Levels presented its challenges, but I embraced them with determination. I was eager to pursue further academic studies toward a degree while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship is determined by the commitment of the individual, and my journey has exemplified this. I invite you to review my project portfolio to gain insight into the diverse projects I have contributed to during my apprenticeship and to appreciate the breadth of my professional skillset.
         """)
-    
+
+    # Horizontal timeline inserted below the bio
+    st.markdown("""
+    <style>
+    .timeline-horizontal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+      position: relative;
+    }
+    .timeline-horizontal::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      border-top: 2px solid #FF9F55;
+      transform: translateY(-50%);
+    }
+    .timeline-event {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100px;
+    }
+    .timeline-event:not(:last-child) {
+      margin-right: 10px;
+    }
+    .timeline-event::before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 20px;
+      height: 20px;
+      background: #FF9F55;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      position: relative;
+      top: -10px;
+    }
+    </style>
+    <div class="timeline-horizontal">
+      <div class="timeline-event">
+        <h4>2020</h4>
+        <p>Started A Levels<br>(Physics, Film Studies, IT)</p>
+      </div>
+      <div class="timeline-event">
+        <h4>2022</h4>
+        <p>Started Vodafone</p>
+      </div>
+      <div class="timeline-event">
+        <h4>2025</h4>
+        <p>Due to Graduate</p>
+      </div>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.markdown("---")
     
     st.title("My Projects as an Apprentice")
@@ -102,22 +164,22 @@ Lastly, in the Value Tracker Project, I developed a solution that integrated wit
     # ----------------------------------------
     st.title("Contact Me")
     
-    # LinkedIn contact row
-    linkedin_cols = st.columns([1, 3])
-    with linkedin_cols[0]:
+    # Create two equal columns for contact information
+    contact_cols = st.columns(2)
+    with contact_cols[0]:
+        st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
         lottie_linkedin = load_lottieurl("https://lottie.host/c2d857da-a9fc-4986-8f61-15e77bc42c25/eUjrL2Ocmq.json")
         if lottie_linkedin:
             st_lottie(lottie_linkedin, height=200)
-    with linkedin_cols[1]:
-        st.markdown("### [LinkedIn Profile](https://www.linkedin.com/in/samuel-turner-b6b5b0251/)")
+        st.markdown("<h3><a href='https://www.linkedin.com/in/samuel-turner-b6b5b0251/' target='_blank'>LinkedIn Profile</a></h3>", unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
     
-    # GitHub contact row
-    github_cols = st.columns([1, 3])
-    with github_cols[0]:
+    with contact_cols[1]:
+        st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
         lottie_github = load_lottieurl("https://lottie.host/94a8510d-a206-46f2-a0c5-2e34cf76437d/A3LxSpCFuF.json")
         if lottie_github:
-            st_lottie(lottie_github, height=120)
-    with github_cols[1]:
-        st.markdown("### [GitHub Profile](https://github.com/sammysams1234)")
+            st_lottie(lottie_github, height=150)
+        st.markdown("<h3><a href='https://github.com/sammysams1234' target='_blank'>GitHub Profile</a></h3>", unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
 home_page()
