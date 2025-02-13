@@ -157,8 +157,6 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.write(
     """
-    # PowerApps/Power Automate Projects Showcase
-
     I have worked on various PowerApps/Power Automate projects that have streamlined business processes and enhanced internal collaboration.
 
     ## Skills Assessment Tool Project
