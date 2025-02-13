@@ -1,3 +1,4 @@
+import base64
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
@@ -9,12 +10,18 @@ def load_lottieurl(url: str):
         return None
     return response.json()
 
+# Function to encode image to Base64
+def get_base64_image(image_path: str) -> str:
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
 # Set up the page configuration
 st.set_page_config(page_title="My Portfolio", layout="wide", initial_sidebar_state="expanded")
 
 def home_page():
     st.title("My Portfolio")
     st.subheader("About Me")
+    
     # Two columns: one for the image, one for the bio text.
     col1, col2 = st.columns([1, 2])
     with col1:
@@ -29,101 +36,101 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 
     # Horizontal animated timeline placed below the bio
     timeline_html = """
-<style>
-.timeline {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    margin: 20px 0;
-    padding: 20px 0;
-}
-/* Animate the connecting line */
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    right: 5%;
-    height: 2px;
-    background: #ddd;
-    z-index: 0;
-    animation: drawLine 1s forwards;
-}
-
-@keyframes drawLine {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
-}
-
-.timeline .event {
-    position: relative;
-    text-align: center;
-    flex: 1;
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideIn 0.5s forwards;
-}
-
-/* Stagger the animation for each event */
-.timeline .event:nth-child(1) { animation-delay: 1s; }
-.timeline .event:nth-child(2) { animation-delay: 2s; }
-.timeline .event:nth-child(3) { animation-delay: 3s; }
-
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    <style>
+    .timeline {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        margin: 20px 0;
+        padding: 20px 0;
     }
-}
-
-/* Style the circle as a container for the year */
-.timeline .event .circle {
-    width: 40px;
-    height: 40px;
-    background: #E60000;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    opacity: 0;
-    transform: scale(0);
-    animation: popIn 0.5s forwards;
-}
-
-/* Stagger the circle animations to match their parent event */
-.timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
-.timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
-.timeline .event:nth-child(3) .circle { animation-delay: 0.9s; }
-
-@keyframes popIn {
-    to {
-        opacity: 1;
-        transform: scale(1);
+    /* Animate the connecting line */
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        right: 5%;
+        height: 2px;
+        background: #ddd;
+        z-index: 0;
+        animation: drawLine 1s forwards;
     }
-}
-</style>
 
-<div class="timeline">
-  <div class="event">
-    <div class="circle">2020</div>
-    <p>Started A Levels - Physics, Film Studies, IT</p>
-  </div>
-  <div class="event">
-    <div class="circle">2022</div>
-    <p>Started Vodafone as a Data Analyst Apprentice</p>
-  </div>
-  <div class="event">
-    <div class="circle">2025</div>
-    <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
-  </div>
-</div>
-"""
+    @keyframes drawLine {
+        from { transform: scaleX(0); }
+        to { transform: scaleX(1); }
+    }
+
+    .timeline .event {
+        position: relative;
+        text-align: center;
+        flex: 1;
+        z-index: 1;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slideIn 0.5s forwards;
+    }
+
+    /* Stagger the animation for each event */
+    .timeline .event:nth-child(1) { animation-delay: 1s; }
+    .timeline .event:nth-child(2) { animation-delay: 2s; }
+    .timeline .event:nth-child(3) { animation-delay: 3s; }
+
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Style the circle as a container for the year */
+    .timeline .event .circle {
+        width: 40px;
+        height: 40px;
+        background: #E60000;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        opacity: 0;
+        transform: scale(0);
+        animation: popIn 0.5s forwards;
+    }
+
+    /* Stagger the circle animations to match their parent event */
+    .timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
+    .timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
+    .timeline .event:nth-child(3) .circle { animation-delay: 0.9s; }
+
+    @keyframes popIn {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    </style>
+
+    <div class="timeline">
+      <div class="event">
+        <div class="circle">2020</div>
+        <p>Started A Levels - Physics, Film Studies, IT</p>
+      </div>
+      <div class="event">
+        <div class="circle">2022</div>
+        <p>Started Vodafone as a Data Analyst Apprentice</p>
+      </div>
+      <div class="event">
+        <div class="circle">2025</div>
+        <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
+      </div>
+    </div>
+    """
     st.markdown(timeline_html, unsafe_allow_html=True)
     
     st.markdown("---")
@@ -183,7 +190,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     st.markdown("---")
     
     # ----------------------------------------
-    # Contact Me Section with Clickable Animated Images
+    # Contact Me Section with Clickable Animated Images (using Base64)
     # ----------------------------------------
     st.title("Contact Me")
     
@@ -206,16 +213,21 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     </style>
     """, unsafe_allow_html=True)
     
-    # Display the clickable images
-    st.markdown("""
+    # Encode images to Base64
+    linkedin_b64 = get_base64_image("assets/linkedinlogo.png")
+    github_b64 = get_base64_image("assets/githublogo.png")
+    
+    # Create HTML with embedded images
+    contact_html = f"""
     <div class="contact-container">
         <a href="https://www.linkedin.com/in/samuel-turner-b6b5b0251/" target="_blank">
-            <img class="clickable-img" src="assets/linkedinlogo.png" width="150">
+            <img class="clickable-img" src="data:image/png;base64,{linkedin_b64}" width="150">
         </a>
         <a href="https://github.com/sammysams1234" target="_blank">
-            <img class="clickable-img" src="assets/githublogo.png" width="150">
+            <img class="clickable-img" src="data:image/png;base64,{github_b64}" width="150">
         </a>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    st.markdown(contact_html, unsafe_allow_html=True)
 
 home_page()
