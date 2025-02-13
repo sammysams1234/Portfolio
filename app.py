@@ -1,7 +1,6 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
-import time
 
 # Function to load Lottie animations from a URL
 def load_lottieurl(url: str):
@@ -9,15 +8,6 @@ def load_lottieurl(url: str):
     if response.status_code != 200:
         return None
     return response.json()
-
-# Function to simulate a typing effect for given text
-def type_writer(text, delay=0.03):
-    placeholder = st.empty()
-    typed_text = ""
-    for char in text:
-        typed_text += char
-        placeholder.markdown(typed_text)
-        time.sleep(delay)
 
 # Set up the page configuration
 st.set_page_config(page_title="My Portfolio", layout="wide", initial_sidebar_state="expanded")
@@ -35,16 +25,11 @@ def home_page():
         with center:
             st.image("samuel_pfp.png", width=500)
     with col2:
-        bio_text = (
-            "I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have gained 2.5 years of experience since joining the company at the age of 18. "
-            "Starting my career at such a prominent organisation immediately after completing my A-Levels presented its challenges, but I embraced them with determination. "
-            "I was eager to pursue further academic studies toward a degree while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship "
-            "is determined by the commitment of the individual, and my journey has exemplified this. I invite you to review my project portfolio to gain insight into the diverse projects "
-            "I have contributed to during my apprenticeship and to appreciate the breadth of my professional skillset."
-        )
-        type_writer(bio_text, delay=0.03)
+        st.write("""
+I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have gained 2.5 years of experience since joining the company at the age of 18. Starting my career at such a prominent organisation immediately after completing my A-Levels presented its challenges, but I embraced them with determination. I was eager to pursue further academic studies toward a degree while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship is determined by the commitment of the individual, and my journey has exemplified this. I invite you to review my project portfolio to gain insight into the diverse projects I have contributed to during my apprenticeship and to appreciate the breadth of my professional skillset.
+        """)
 
-    # Horizontal animated timeline with slower animations
+    # Horizontal animated timeline placed below the bio
     timeline_html = """
     <style>
     .timeline {
@@ -55,7 +40,7 @@ def home_page():
         margin: 20px 0;
         padding: 20px 0;
     }
-    /* Animate the connecting line slower */
+    /* Animate the connecting line */
     .timeline::before {
         content: "";
         position: absolute;
@@ -65,7 +50,7 @@ def home_page():
         height: 2px;
         background: #ddd;
         z-index: 0;
-        animation: drawLine 2s forwards;
+        animation: drawLine 1s forwards;
     }
     
     @keyframes drawLine {
@@ -80,13 +65,13 @@ def home_page():
         z-index: 1;
         opacity: 0;
         transform: translateY(20px);
-        animation: slideIn 1s forwards;
+        animation: slideIn 0.5s forwards;
     }
     
     /* Stagger the animation for each event */
-    .timeline .event:nth-child(1) { animation-delay: 0.6s; }
-    .timeline .event:nth-child(2) { animation-delay: 1.2s; }
-    .timeline .event:nth-child(3) { animation-delay: 1.8s; }
+    .timeline .event:nth-child(1) { animation-delay: 0.3s; }
+    .timeline .event:nth-child(2) { animation-delay: 0.6s; }
+    .timeline .event:nth-child(3) { animation-delay: 0.9s; }
     
     @keyframes slideIn {
         to {
@@ -103,13 +88,13 @@ def home_page():
         margin: 0 auto 10px auto;
         opacity: 0;
         transform: scale(0);
-        animation: popIn 1s forwards;
+        animation: popIn 0.5s forwards;
     }
     
     /* Stagger the circle animations to match their parent event */
-    .timeline .event:nth-child(1) .circle { animation-delay: 0.6s; }
-    .timeline .event:nth-child(2) .circle { animation-delay: 1.2s; }
-    .timeline .event:nth-child(3) .circle { animation-delay: 1.8s; }
+    .timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
+    .timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
+    .timeline .event:nth-child(3) .circle { animation-delay: 0.9s; }
     
     @keyframes popIn {
         to {
@@ -162,7 +147,7 @@ def home_page():
     """
     I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries. I managed version control with GitHub, utilized Cloud Build for containerizing the application with YAML configurations and Dockerfiles, and deployed it on Cloud Run secured behind a custom company DNS. Furthermore, I implemented a weekly update pipeline with Vertex AI Kubernetes that employs Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery, ensuring that the knowledge base remains current. The project also saw an evolution in UI frameworks, starting with Streamlit and transitioning to a more flexible solution with Flask, HTML, and CSS, all while exploring the emerging capabilities of large language models (LLMs).
     """
-        )
+                )
     st.markdown("---")
     
     # ----------------------------------------
@@ -179,7 +164,7 @@ def home_page():
     """
     I developed a suite of solutions under the Pricing Automation & Process Enhancements portfolio that significantly streamlined business operations. First, I engineered an automated pricing solution using Python, which leverages Selenium and Beautiful Soup to scrape affiliate websites, structure the extracted data into a tabular format, and store it in BigQuery. This approach drastically reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies. In addition, I created separate projects to further enhance internal processes: one involved developing Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base; another focused on processing HR file data to deliver strategic insights for workforce optimization; and a third employed the Fakerr library to generate realistic synthetic datasets for testing and development, thereby enhancing system robustness while ensuring data privacy.
     """
-        )
+                )
     st.markdown("---")
     
     # ----------------------------------------
