@@ -14,8 +14,6 @@ st.set_page_config(page_title="My Portfolio", layout="wide", initial_sidebar_sta
 
 def home_page():
     st.title("My Portfolio")
-    st.write("Hi and welcome to my portfolio! I am Samuel Turner, a Level 6 Data Analyst Apprentice at Vodafone")
-    
     st.subheader("About Me")
     # Two columns: one for the image, one for the bio text.
     col1, col2 = st.columns([1, 2])
