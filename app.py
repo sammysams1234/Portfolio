@@ -129,10 +129,10 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_powerapps, height=300)
     with col2:
         st.write(
-                """
-    As a business we identified that monitoring competitive pricing on affiliate sites was not only time-consuming but also prone to errors. To solve this, I engineered an automated pricing solution using Python and collaborated with a team to design a scalable system. By leveraging Selenium and Beautiful Soup, the system scrapes affiliate websites, structures the extracted data into a tabular format, and stores it in BigQuery. This automation significantly reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies.
+    """
+    I identified that manually monitoring competitive pricing on affiliate sites was not only time-consuming but also prone to errors. To solve this, I engineered an automated pricing solution using Python and collaborated with a team to design a scalable system. By leveraging Selenium and Beautiful Soup, the system scrapes affiliate websites, structures the extracted data into a tabular format, and stores it in BigQuery. This automation significantly reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies.
 
-    ## Key Highlights
+    ## Key Technical Highlights
 
     - **Automated Data Collection:** Utilized Selenium and Beautiful Soup to scrape affiliate websites, transforming unstructured data into actionable insights.
     - **Efficient Data Management:** Structured and stored data in BigQuery, enabling streamlined analysis and decision-making.
@@ -157,20 +157,17 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.write(
     """
-    I have worked on various PowerApps/Power Automate projects that have streamlined business processes and enhanced internal collaboration.
+    I have worked on various PowerApps/Power Automate projects that have streamlined business processes and enhanced internal collaboration. These initiatives have improved performance reviews, facilitated cross-departmental learning, and enabled real-time project tracking.
 
-    ## Skills Assessment Tool Project
+    ## Key Technical Highlights
 
-    Developed a comprehensive platform that allowed employees to self-assess their skills while enabling managers to provide objective ratings. This dual-rating system streamlined the performance review process by capturing both self-perception and managerial feedback. Data was stored in SharePoint and seamlessly integrated with QlikSense for advanced analysis. Automated email notifications and reminders were implemented using Power Automate, reducing manual intervention and ensuring timely communications.
+    - **Skills Assessment Tool Project:** Developed a comprehensive platform that enabled employees to self-assess their skills while allowing managers to provide objective ratings. This dual-rating system streamlined performance reviews by capturing both self-perception and managerial feedback, with data stored in SharePoint and integrated with QlikSense for advanced analysis. Automated email notifications via Power Automate reduced manual intervention and ensured timely communications.
+    - **Department Shadowing Application Project:** Designed an intuitive application that empowered employees to apply for shadowing opportunities across various departments as part of the company’s people strategy. The PowerApps-driven interface ensured a seamless application process, while Power Automate facilitated automated email confirmations and notifications, significantly enhancing cross-departmental learning and career development.
+    - **Value Tracker Project:** Developed a solution integrated with Jira to monitor and track the business value of ongoing projects in real time. Built on PowerApps, the application provided a user-friendly dashboard for stakeholders to view critical project metrics, while Power Automate ensured seamless data synchronization between Jira and the tracker, empowering decision-makers with timely insights for optimized resource allocation and strategic planning.
 
-    ## Department Shadowing Application Project
-
-    Designed an intuitive application that enabled employees to apply for shadowing opportunities across various departments as part of the company’s people strategy. The PowerApps-driven user interface provided a smooth and accessible application process, while Power Automate facilitated automated email confirmations and notifications, ensuring that all stakeholders remained well-informed. This project significantly enhanced cross-departmental learning and career development.
-
-    ## Value Tracker Project
-
-    Developed a solution that integrated with Jira to monitor and track the business value of ongoing projects in real time. Built on PowerApps, the application provided a user-friendly dashboard for stakeholders to view critical project metrics, while Power Automate ensured seamless data synchronization between Jira and the tracker. This integration empowered decision-makers with timely insights, optimizing resource allocation and strategic planning.
-    """)
+    These projects collectively demonstrate my ability to leverage PowerApps and Power Automate to create efficient, scalable solutions that drive business process improvements and strategic growth.
+    """
+        )
     
     st.markdown("---")
     
