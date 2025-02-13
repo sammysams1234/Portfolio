@@ -206,7 +206,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     }
     .contact-container {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 2rem;
     }
