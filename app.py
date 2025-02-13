@@ -82,7 +82,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 .timeline .event .circle {
     width: 40px;
     height: 40px;
-    background: #FF9F55;
+    background: #E60000;
     border-radius: 50%;
     margin: 0 auto 10px auto;
     display: flex;
