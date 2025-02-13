@@ -65,6 +65,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     transform: translateY(20px);
     animation: slideIn 0.5s forwards;
 }
+
 /* Stagger the animation for each event */
 .timeline .event:nth-child(1) { animation-delay: 1s; }
 .timeline .event:nth-child(2) { animation-delay: 2s; }
@@ -77,23 +78,24 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     }
 }
 
-/* New container to center the circle and year together */
-.timeline .event .indicator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Style the circle as a container for the year */
 .timeline .event .circle {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: #FF9F55;
     border-radius: 50%;
-    margin-bottom: 5px;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
     opacity: 0;
     transform: scale(0);
     animation: popIn 0.5s forwards;
 }
+
 /* Stagger the circle animations to match their parent event */
 .timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
 .timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
@@ -105,33 +107,19 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         transform: scale(1);
     }
 }
-
-/* Reset any default margin on the year text */
-.timeline .event h4 {
-    margin: 0;
-}
 </style>
 
 <div class="timeline">
   <div class="event">
-    <div class="indicator">
-      <div class="circle"></div>
-      <h4>2020</h4>
-    </div>
+    <div class="circle">2020</div>
     <p>Started A Levels - Physics, Film Studies, IT</p>
   </div>
   <div class="event">
-    <div class="indicator">
-      <div class="circle"></div>
-      <h4>2022</h4>
-    </div>
+    <div class="circle">2022</div>
     <p>Started Vodafone as a Data Analyst Apprentice</p>
   </div>
   <div class="event">
-    <div class="indicator">
-      <div class="circle"></div>
-      <h4>2025</h4>
-    </div>
+    <div class="circle">2025</div>
     <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
   </div>
 </div>
