@@ -30,61 +30,102 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         """)
 
     # Horizontal timeline placed below the bio
-    timeline_html = """
-    <style>
-    .timeline {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        margin: 20px 0;
-        padding: 20px 0;
+timeline_html = """
+<style>
+.timeline {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+/* Animate the connecting line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: #ddd;
+    z-index: 0;
+    animation: drawLine 1s forwards;
+}
+
+@keyframes drawLine {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.timeline .event {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+/* Stagger the animation for each event */
+.timeline .event:nth-child(1) { animation-delay: 0.3s; }
+.timeline .event:nth-child(2) { animation-delay: 0.6s; }
+.timeline .event:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    .timeline::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        right: 5%;
-        height: 2px;
-        background: #ddd;
-        z-index: 0;
+}
+
+.timeline .event .circle {
+    width: 20px;
+    height: 20px;
+    background: #FF9F55;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    opacity: 0;
+    transform: scale(0);
+    animation: popIn 0.5s forwards;
+}
+
+/* Stagger the circle animations to match their parent event */
+.timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
+.timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
+.timeline .event:nth-child(3) .circle { animation-delay: 0.9s; }
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
-    .timeline .event {
-        position: relative;
-        text-align: center;
-        flex: 1;
-        z-index: 1;
-    }
-    .timeline .event .circle {
-        width: 20px;
-        height: 20px;
-        background: #FF9F55;
-        border-radius: 50%;
-        margin: 0 auto 10px auto;
-    }
-    /* Move the year up slightly */
-    .timeline .event h4 {
-        margin-top: -10px;
-    }
-    </style>
-    <div class="timeline">
-      <div class="event">
-        <div class="circle"></div>
-        <h4>2020</h4>
-        <p>Started A Levels - Physics, Film Studies, IT</p>
-      </div>
-      <div class="event">
-        <div class="circle"></div>
-        <h4>2022</h4>
-        <p>Started Vodafone as a Data Analyst Apprentice</p>
-      </div>
-      <div class="event">
-        <div class="circle"></div>
-        <h4>2025</h4>
-        <p>Due to graduate with Digital Solutions specialising in D&A degree</p>
-      </div>
-    </div>
+}
+
+/* Move the year up slightly */
+.timeline .event h4 {
+    margin-top: -10px;
+}
+</style>
+
+<div class="timeline">
+  <div class="event">
+    <div class="circle"></div>
+    <h4>2020</h4>
+    <p>Started A Levels - Physics, Film Studies, IT</p>
+  </div>
+  <div class="event">
+    <div class="circle"></div>
+    <h4>2022</h4>
+    <p>Started Vodafone as a Data Analyst Apprentice</p>
+  </div>
+  <div class="event">
+    <div class="circle"></div>
+    <h4>2025</h4>
+    <p>Due to graduate with Digital Solutions specialising in D&A degree</p>
+  </div>
+</div>
     """
     st.markdown(timeline_html, unsafe_allow_html=True)
     
