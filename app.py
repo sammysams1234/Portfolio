@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
+import streamlit.components.v1 as components  # Needed to embed custom HTML
 
 # Function to load Lottie animations from a URL
 def load_lottieurl(url: str):
@@ -15,17 +16,47 @@ st.set_page_config(page_title="My Portfolio", layout="wide", initial_sidebar_sta
 def home_page():
     st.title("My Portfolio")
     st.subheader("About Me")
-    # Two columns: one for the image, one for the bio text.
+    
+    # Two columns: one for the image, one for the bio text with typing animation.
     col1, col2 = st.columns([1, 2])
     with col1:
         # Center the image using nested columns
         left, center, right = st.columns([1, 2, 1])
         with center:
             st.image("samuel_pfp.png", width=500)
+    
     with col2:
-        st.write("""
-I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have gained 2.5 years of experience since joining the company at the age of 18. Starting my career at such a prominent organisation immediately after completing my A-Levels presented its challenges, but I embraced them with determination. I was eager to pursue further academic studies toward a degree while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship is determined by the commitment of the individual, and my journey has exemplified this. I invite you to review my project portfolio to gain insight into the diverse projects I have contributed to during my apprenticeship and to appreciate the breadth of my professional skillset.
-        """)
+        # Define your bio text
+        bio_text = (
+            "I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have "
+            "gained 2.5 years of experience since joining the company at the age of 18. Starting my career "
+            "at such a prominent organisation immediately after completing my A-Levels presented its challenges, "
+            "but I embraced them with determination. I was eager to pursue further academic studies toward a degree "
+            "while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship "
+            "is determined by the commitment of the individual, and my journey has exemplified this. I invite you "
+            "to review my project portfolio to gain insight into the diverse projects I have contributed to during "
+            "my apprenticeship and to appreciate the breadth of my professional skillset."
+        )
+        
+        # HTML + JavaScript for a fast typewriter animation
+        typing_html = f"""
+        <div id="bio" style="font-size: 16px; font-family: Arial, sans-serif; line-height: 1.5;"></div>
+        <script>
+        var i = 0;
+        var txt = `{bio_text}`;
+        var speed = 10;  // milliseconds per character (adjust for faster/slower typing)
+        function typeWriter() {{
+          if (i < txt.length) {{
+            document.getElementById("bio").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }}
+        }}
+        typeWriter();
+        </script>
+        """
+        # Embed the custom HTML (adjust height as needed)
+        components.html(typing_html, height=200)
 
     # Horizontal animated timeline placed below the bio
     timeline_html = """
