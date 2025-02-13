@@ -103,17 +103,8 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write(
-                """
-    I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries.
-
-    ## Key Highlights
-
-    - **Version Control & Deployment:** Managed source code with GitHub and utilized Cloud Build to containerize the application using YAML configurations and Dockerfiles. Successfully deployed the container on Cloud Run, secured behind a custom company DNS.
-    - **Automated Updates:** Implemented a weekly update pipeline with Vertex AI Kubernetes, using Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery. This ensures the knowledge base remains current.
-    - **UI & Framework Evolution:** Initially crafted the user interface with Streamlit, then transitioned to a more flexible and scalable solution with Flask, HTML, and CSS—expanding my expertise with new frameworks.
-    - **Emerging Technologies:** Explored the capabilities of large language models (LLMs) throughout the project, deepening my understanding and integration of advanced AI techniques.
-
-    This project not only showcases my ability to quickly adapt and learn new technologies but also highlights my proficiency in creating scalable, production-level applications in a dynamic, cloud-based environment.
+    """
+    I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries. I managed version control with GitHub, utilized Cloud Build for containerizing the application with YAML configurations and Dockerfiles, and deployed it on Cloud Run secured behind a custom company DNS. Furthermore, I implemented a weekly update pipeline with Vertex AI Kubernetes that employs Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery, ensuring that the knowledge base remains current. The project also saw an evolution in UI frameworks, starting with Streamlit and transitioning to a more flexible solution with Flask, HTML, and CSS, all while exploring the emerging capabilities of large language models (LLMs).
     """
                 )
     st.markdown("---")
@@ -130,17 +121,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.write(
     """
-    I identified that manually monitoring competitive pricing on affiliate sites was not only time-consuming but also prone to errors. To solve this, I engineered an automated pricing solution using Python and collaborated with a team to design a scalable system. By leveraging Selenium and Beautiful Soup, the system scrapes affiliate websites, structures the extracted data into a tabular format, and stores it in BigQuery. This automation significantly reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies.
-
-    ## Key Technical Highlights
-
-    - **Automated Data Collection:** Utilized Selenium and Beautiful Soup to scrape affiliate websites, transforming unstructured data into actionable insights.
-    - **Efficient Data Management:** Structured and stored data in BigQuery, enabling streamlined analysis and decision-making.
-    - **Internal Process Enhancements:** Developed Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base.
-    - **HR Data Insights:** Created ad hoc Python solutions for processing HR file data, providing strategic insights to better position our workforce.
-    - **Synthetic Data Generation:** Employed the Fakerr library to generate realistic synthetic datasets for testing and development, enhancing system robustness while ensuring data privacy.
-
-    This project demonstrates my capability to create innovative, efficient solutions that drive operational excellence and strategic growth.
+    I developed a suite of solutions under the Pricing Automation & Process Enhancements portfolio that significantly streamlined business operations. First, I engineered an automated pricing solution using Python, which leverages Selenium and Beautiful Soup to scrape affiliate websites, structure the extracted data into a tabular format, and store it in BigQuery. This approach drastically reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies. In addition, I created separate projects to further enhance internal processes: one involved developing Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base; another focused on processing HR file data to deliver strategic insights for workforce optimization; and a third employed the Fakerr library to generate realistic synthetic datasets for testing and development, thereby enhancing system robustness while ensuring data privacy.
     """
                 )
     st.markdown("---")
@@ -157,15 +138,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.write(
     """
-    I have worked on various PowerApps/Power Automate projects that have streamlined business processes and enhanced internal collaboration. These initiatives have improved performance reviews, facilitated cross-departmental learning, and enabled real-time project tracking.
-
-    ## Key Technical Highlights
-
-    - **Skills Assessment Tool Project:** Developed a comprehensive platform that enabled employees to self-assess their skills while allowing managers to provide objective ratings. This dual-rating system streamlined performance reviews by capturing both self-perception and managerial feedback, with data stored in SharePoint and integrated with QlikSense for advanced analysis. Automated email notifications via Power Automate reduced manual intervention and ensured timely communications.
-    - **Department Shadowing Application Project:** Designed an intuitive application that empowered employees to apply for shadowing opportunities across various departments as part of the company’s people strategy. The PowerApps-driven interface ensured a seamless application process, while Power Automate facilitated automated email confirmations and notifications, significantly enhancing cross-departmental learning and career development.
-    - **Value Tracker Project:** Developed a solution integrated with Jira to monitor and track the business value of ongoing projects in real time. Built on PowerApps, the application provided a user-friendly dashboard for stakeholders to view critical project metrics, while Power Automate ensured seamless data synchronization between Jira and the tracker, empowering decision-makers with timely insights for optimized resource allocation and strategic planning.
-
-    These projects collectively demonstrate my ability to leverage PowerApps and Power Automate to create efficient, scalable solutions that drive business process improvements and strategic growth.
+    I have developed a series of PowerApps and Power Automate projects that have streamlined business processes and enhanced internal collaboration. In the Skills Assessment Tool Project, I built a comprehensive platform that enabled employees to self-assess their skills while managers provided objective ratings, effectively streamlining performance reviews by capturing both self-perception and managerial feedback, with data stored in SharePoint and integrated with QlikSense for advanced analysis. In the Department Shadowing Application Project, I designed an intuitive PowerApps-driven solution that facilitated cross-departmental shadowing opportunities as part of the company’s people strategy, with Power Automate handling automated email confirmations and notifications to keep all stakeholders informed. Lastly, in the Value Tracker Project, I developed an integrated solution with Jira that monitors and tracks the business value of ongoing projects in real time, offering a user-friendly dashboard built on PowerApps and leveraging Power Automate for seamless data synchronization, thereby empowering decision-makers with timely insights for optimized resource allocation and strategic planning.
     """
         )
     
