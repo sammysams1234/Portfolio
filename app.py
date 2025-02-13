@@ -106,7 +106,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
                 """
     I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries.
 
-    ## Key Technical Highlights
+    ## Key Highlights
 
     - **Version Control & Deployment:** Managed source code with GitHub and utilized Cloud Build to containerize the application using YAML configurations and Dockerfiles. Successfully deployed the container on Cloud Run, secured behind a custom company DNS.
     - **Automated Updates:** Implemented a weekly update pipeline with Vertex AI Kubernetes, using Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery. This ensures the knowledge base remains current.
@@ -155,15 +155,24 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         if lottie_python:
             st_lottie(lottie_python, height=300)
     with col2:
-        st.write("""
-I have worked on various PowerApps/Power Automate projects that have streamlined business processes and enhanced internal collaboration.
+        st.write(
+    """
+    # PowerApps/Power Automate Projects Showcase
 
-In the Skills Assessment Tool Project, I developed a comprehensive platform that allowed employees to self-assess their skills while enabling managers to provide objective ratings. This dual-rating system streamlined the performance review process by capturing both self-perception and managerial feedback, with the data stored in SharePoint and seamlessly integrated with QlikSense for advanced analysis. Automated email notifications and reminders were implemented using Power Automate, reducing manual intervention and ensuring timely communications.
+    I have worked on various PowerApps/Power Automate projects that have streamlined business processes and enhanced internal collaboration.
 
-In the Department Shadowing Application Project, I designed an intuitive application that enabled employees to apply for shadowing opportunities across various departments as part of the company’s people strategy. The PowerApps-driven user interface provided a smooth and accessible application process, while Power Automate facilitated automated email confirmations and notifications, ensuring that all stakeholders remained well-informed. This project significantly enhanced cross-departmental learning and career development.
+    ## Skills Assessment Tool Project
 
-Lastly, in the Value Tracker Project, I developed a solution that integrated with Jira to monitor and track the business value of ongoing projects in real time. Built on PowerApps, the application provided a user-friendly dashboard for stakeholders to view critical project metrics, while Power Automate ensured seamless data synchronization between Jira and the tracker. This integration empowered decision-makers with timely insights, optimizing resource allocation and strategic planning.
-        """)
+    Developed a comprehensive platform that allowed employees to self-assess their skills while enabling managers to provide objective ratings. This dual-rating system streamlined the performance review process by capturing both self-perception and managerial feedback. Data was stored in SharePoint and seamlessly integrated with QlikSense for advanced analysis. Automated email notifications and reminders were implemented using Power Automate, reducing manual intervention and ensuring timely communications.
+
+    ## Department Shadowing Application Project
+
+    Designed an intuitive application that enabled employees to apply for shadowing opportunities across various departments as part of the company’s people strategy. The PowerApps-driven user interface provided a smooth and accessible application process, while Power Automate facilitated automated email confirmations and notifications, ensuring that all stakeholders remained well-informed. This project significantly enhanced cross-departmental learning and career development.
+
+    ## Value Tracker Project
+
+    Developed a solution that integrated with Jira to monitor and track the business value of ongoing projects in real time. Built on PowerApps, the application provided a user-friendly dashboard for stakeholders to view critical project metrics, while Power Automate ensured seamless data synchronization between Jira and the tracker. This integration empowered decision-makers with timely insights, optimizing resource allocation and strategic planning.
+    """)
     
     st.markdown("---")
     
