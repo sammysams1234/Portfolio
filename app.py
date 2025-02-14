@@ -232,6 +232,6 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         </a>
     </div>
     """
-    st.markdown(contact_html, unsafe_allow_html=True)
+st.markdown(contact_html, unsafe_allow_html=True)
 
 home_page()
