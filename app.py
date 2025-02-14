@@ -192,7 +192,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     # ----------------------------------------
     # Contact Me Section with Clickable Animated Images (using Base64)
     # ----------------------------------------
-    st.title("Contact Me")
+    st.title("My Links")
     
     # CSS for clickable image animation
     st.markdown("""
