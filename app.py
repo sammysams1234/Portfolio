@@ -216,6 +216,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     # Encode images to Base64
     linkedin_b64 = get_base64_image("assets/linkedinlogo.png")
     github_b64 = get_base64_image("assets/githublogo.png")
+    pulse_b64 = get_base64_image("assets/pulselogo.png")
     
     # Create HTML with embedded images
     contact_html = f"""
@@ -226,6 +227,8 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         <a href="https://github.com/sammysams1234" target="_blank">
             <img class="clickable-img" src="data:image/png;base64,{github_b64}" width="150">
         </a>
+        <a href="https://pulse-habit-tracker.streamlit.app" target="_blank">
+            <img class="clickable-img" src="data:image/png;base64,{pulse_b64}" width="150">
     </div>
     """
     st.markdown(contact_html, unsafe_allow_html=True)
