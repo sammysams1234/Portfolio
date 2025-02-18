@@ -216,6 +216,8 @@ I have developed a series of PowerApps and Power Automate projects that have str
     
     st.markdown("---")
 
+    st.subheader("Pulse Features")
+
     st.write(
     """
 - **Seamless and Intuitive Experience**: Pulse is a state-of-the-art habit tracking application built using Streamlit, designed to deliver an exceptionally seamless and user-friendly experience from the very first interaction.
@@ -229,6 +231,7 @@ I have developed a series of PowerApps and Power Automate projects that have str
     """
     )
 
+    st.markdown("---")
     
     col_left, col_right = st.columns(2)
     
