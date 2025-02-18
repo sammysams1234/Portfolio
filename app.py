@@ -227,6 +227,7 @@ Complementing the planner is a comprehensive analytics dashboard that breaks dow
 In addition to these core features, Pulse includes a robust to-do list designed to enhance daily organization and productivity. This to-do list is seamlessly integrated with the habit tracking system, offering a unified view of your tasks and routines and reinforcing the app’s mission of continuous personal development. Recognizing that growth is often driven by social interaction and shared accountability, Pulse also enables you to connect with friends and peers. You can easily share your weekly habit progress, engage in friendly competitions, and even track your performance on an integrated leaderboard that fuels a spirit of community and collective achievement.
 
 Altogether, Pulse is not just a habit tracker—it is a holistic platform that blends secure data management, insightful analytics, AI-driven journaling, and community engagement into one comprehensive tool. Whether you’re looking to establish new routines, gain valuable insights from your daily activities, or simply stay organized and motivated through social interaction, Pulse is designed to support and empower every step of your journey towards a more productive and fulfilling life."""
+    )
     
     col_left, col_right = st.columns(2)
     
