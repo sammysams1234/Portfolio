@@ -253,13 +253,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col1:
         st.image("assets/track_tracker.png")
     
-    with col2:
-        st.write(
-"""
-- **Seamless Music Tracking**: WIP
-"""
-        )
-    st.markdown("---")
+    col_left, col_right = st.columns(2)
     
     # Skills Section
     with col_left:
