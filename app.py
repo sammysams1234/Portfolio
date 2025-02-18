@@ -1,3 +1,4 @@
+import os
 import base64
 import streamlit as st
 from streamlit_lottie import st_lottie
@@ -10,7 +11,7 @@ def load_lottieurl(url: str):
         return None
     return response.json()
 
-# Function to encode image to Base64
+# Function to encode image to Base64 (still useful for other sections if needed)
 def get_base64_image(image_path: str) -> str:
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
@@ -30,9 +31,11 @@ def home_page():
         with center:
             st.image("assets/samuel_pfp.png", width=500)
     with col2:
-        st.write("""
+        st.write(
+            """
 I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I have gained 2.5 years of experience since joining the company at the age of 18. Starting my career at such a prominent organisation immediately after completing my A-Levels presented its challenges, but I embraced them with determination. I was eager to pursue further academic studies toward a degree while gaining invaluable practical experience. I firmly believe that the success of an apprenticeship is determined by the commitment of the individual, and my journey has exemplified this. I invite you to review my project portfolio to gain insight into the diverse projects I have contributed to during my apprenticeship and to appreciate the breadth of my professional skillset.
-        """)
+            """
+        )
 
     # Horizontal animated timeline placed below the bio
     timeline_html = """
@@ -148,10 +151,10 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write(
-    """
-    I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries. I managed version control with GitHub, utilized Cloud Build for containerizing the application with YAML configurations and Dockerfiles, and deployed it on Cloud Run secured behind a custom company DNS. Furthermore, I implemented a weekly update pipeline with Vertex AI Kubernetes that employs Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery, ensuring that the knowledge base remains current. The project also saw an evolution in UI frameworks, starting with Streamlit and transitioning to a more flexible solution with Flask, HTML, and CSS, all while exploring the emerging capabilities of large language models (LLMs).
-    """
-                )
+            """
+I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries. I managed version control with GitHub, utilized Cloud Build for containerizing the application with YAML configurations and Dockerfiles, and deployed it on Cloud Run secured behind a custom company DNS. Furthermore, I implemented a weekly update pipeline with Vertex AI Kubernetes that employs Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery, ensuring that the knowledge base remains current. The project also saw an evolution in UI frameworks, starting with Streamlit and transitioning to a more flexible solution with Flask, HTML, and CSS, all while exploring the emerging capabilities of large language models (LLMs).
+            """
+        )
     st.markdown("---")
     
     # ----------------------------------------
@@ -165,10 +168,10 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_powerapps, height=300)
     with col2:
         st.write(
-    """
-    I developed a suite of solutions under the Pricing Automation & Process Enhancements portfolio that significantly streamlined business operations. First, I engineered an automated pricing solution using Python, which leverages Selenium and Beautiful Soup to scrape affiliate websites, structure the extracted data into a tabular format, and store it in BigQuery. This approach drastically reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies. In addition, I created separate projects to further enhance internal processes: one involved developing Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base; another focused on processing HR file data to deliver strategic insights for workforce optimization; and a third employed the Fakerr library to generate realistic synthetic datasets for testing and development, thereby enhancing system robustness while ensuring data privacy.
-    """
-                )
+            """
+I developed a suite of solutions under the Pricing Automation & Process Enhancements portfolio that significantly streamlined business operations. First, I engineered an automated pricing solution using Python, which leverages Selenium and Beautiful Soup to scrape affiliate websites, structure the extracted data into a tabular format, and store it in BigQuery. This approach drastically reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies. In addition, I created separate projects to further enhance internal processes: one involved developing Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base; another focused on processing HR file data to deliver strategic insights for workforce optimization; and a third employed the Fakerr library to generate realistic synthetic datasets for testing and development, thereby enhancing system robustness while ensuring data privacy.
+            """
+        )
     st.markdown("---")
 
     # ----------------------------------------
@@ -181,7 +184,11 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         if lottie_webapps:
             st_lottie(lottie_webapps, height=300)
     with col2:
-        st.write("I have developed web applications using a Streamlit, Flask and React at a basic level. Many have been personal projects - like this Portfolio site! I have also developed an application in Streamlit called Pulse Habit Tracker which allows users to track habits, manage an AI-Powered well-being journal, and a friend system for habit leaderboards. In addition, a music rating app called Track Tracker is in the works utilising Spotify's API capabilities.")
+        st.write(
+            """
+I have developed web applications using a Streamlit, Flask and React at a basic level. Many have been personal projects - like this Portfolio site! I have also developed an application in Streamlit called Pulse Habit Tracker which allows users to track habits, manage an AI-Powered well-being journal, and a friend system for habit leaderboards. In addition, a music rating app called Track Tracker is in the works utilising Spotify's API capabilities.
+            """
+        )
     st.markdown("---")
     
     # ----------------------------------------
@@ -195,70 +202,68 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_python, height=300)
     with col2:
         st.write(
-    """
-    I have developed a series of PowerApps and Power Automate projects that have streamlined business processes and enhanced internal collaboration. In the Skills Assessment Tool Project, I built a comprehensive platform that enabled employees to self-assess their skills while managers provided objective ratings, effectively streamlining performance reviews by capturing both self-perception and managerial feedback, with data stored in SharePoint and integrated with QlikSense for advanced analysis. In the Department Shadowing Application Project, I designed an intuitive PowerApps-driven solution that facilitated cross-departmental shadowing opportunities as part of the company's people strategy, with Power Automate handling automated email confirmations and notifications to keep all stakeholders informed. Lastly, in the Value Tracker Project, I developed an integrated solution with Jira that monitors and tracks the business value of ongoing projects in real time, offering a user-friendly dashboard built on PowerApps and leveraging Power Automate for seamless data synchronization, thereby empowering decision-makers with timely insights for optimized resource allocation and strategic planning.
-    """
+            """
+I have developed a series of PowerApps and Power Automate projects that have streamlined business processes and enhanced internal collaboration. In the Skills Assessment Tool Project, I built a comprehensive platform that enabled employees to self-assess their skills while managers provided objective ratings, effectively streamlining performance reviews by capturing both self-perception and managerial feedback, with data stored in SharePoint and integrated with QlikSense for advanced analysis. In the Department Shadowing Application Project, I designed an intuitive PowerApps-driven solution that facilitated cross-departmental shadowing opportunities as part of the company's people strategy, with Power Automate handling automated email confirmations and notifications to keep all stakeholders informed. Lastly, in the Value Tracker Project, I developed an integrated solution with Jira that monitors and tracks the business value of ongoing projects in real time, offering a user-friendly dashboard built on PowerApps and leveraging Power Automate for seamless data synchronization, thereby empowering decision-makers with timely insights for optimized resource allocation and strategic planning.
+            """
         )
-    
     st.markdown("---")
     
     # ----------------------------------------
-    # Skills Section with Clickable Animated Images (using Base64)
+    # Skills Section (Dynamic Tiling)
     # ----------------------------------------
     st.title("My Skills")
-    
-    # For now, using placeholder images. Replace these with images of your skills.
-    skill1_b64 = get_base64_image("assets/skill1.png")
-    skill2_b64 = get_base64_image("assets/skill2.png")
-    skill3_b64 = get_base64_image("assets/skill3.png")
-    
-    skills_html = f"""
-    <div class="contact-container">
-        <a href="#" target="_blank">
-            <img class="clickable-img" src="data:image/png;base64,{skill1_b64}" width="150">
-        </a>
-        <a href="#" target="_blank">
-            <img class="clickable-img" src="data:image/png;base64,{skill2_b64}" width="150">
-        </a>
-        <a href="#" target="_blank">
-            <img class="clickable-img" src="data:image/png;base64,{skill3_b64}" width="150">
-        </a>
-    </div>
-    """
-    st.markdown(skills_html, unsafe_allow_html=True)
-    
+
+    # Read all images from the 'assets/skills' folder
+    skill_folder = "assets/skills"
+    skill_images = [
+        f for f in os.listdir(skill_folder)
+        if f.lower().endswith((".png", ".jpg", ".jpeg", ".gif"))
+    ]
+
+    # Define how many columns per row
+    num_cols = 4
+
+    # Display images in a grid
+    for i in range(0, len(skill_images), num_cols):
+        row_images = skill_images[i:i+num_cols]
+        cols = st.columns(len(row_images))
+        for col, image_name in zip(cols, row_images):
+            image_path = os.path.join(skill_folder, image_name)
+            col.image(image_path, use_column_width=True)
+
     st.markdown("---")
     
     # ----------------------------------------
-    # Contact Me Section with Clickable Animated Images (using Base64)
+    # Contact Me Section with Clickable Images
     # ----------------------------------------
     st.title("My Links")
     
     # CSS for clickable image animation
-    st.markdown("""
-    <style>
-    .clickable-img {
-        transition: transform 0.3s ease;
-        cursor: pointer;
-    }
-    .clickable-img:hover {
-        transform: scale(1.1);
-    }
-    .contact-container {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2rem;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        """
+        <style>
+        .clickable-img {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .clickable-img:hover {
+            transform: scale(1.1);
+        }
+        .contact-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     
-    # Encode images to Base64 for contact links
     linkedin_b64 = get_base64_image("assets/linkedinlogo.png")
     github_b64 = get_base64_image("assets/githublogo.png")
     pulse_b64 = get_base64_image("assets/pulselogo.png")
     
-    # Create HTML with embedded images for contact links
     contact_html = f"""
     <div class="contact-container">
         <a href="https://www.linkedin.com/in/samuel-turner-b6b5b0251/" target="_blank">
