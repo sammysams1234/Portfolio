@@ -229,7 +229,7 @@ I have developed a series of PowerApps and Power Automate projects that have str
         cols = st.columns(len(row_images))
         for col, image_name in zip(cols, row_images):
             image_path = os.path.join(skill_folder, image_name)
-            col.image(image_path, use_column_width=True)
+            col.image(image_path, use_container_width=True)
 
     st.markdown("---")
     
