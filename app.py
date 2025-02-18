@@ -181,7 +181,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         if lottie_webapps:
             st_lottie(lottie_webapps, height=300)
     with col2:
-        st.write("Test")
+        st.write("I have developed web applications using a Streamlit, Flask and React at a basic level. Many have been personal projects - like this Portfolio site! I have also developed an application in Streamlit called Pulse Habit Tracker which allows users to track habits, manage an AI-Powered well-being journal, and a friend system for habit leaderboards. In addition, a music rating app called Track Tracker is in the works utilising Spotify's API capabilities.")
     st.markdown("---")
     
     # ----------------------------------------
