@@ -11,7 +11,7 @@ def load_lottieurl(url: str):
         return None
     return response.json()
 
-# Function to encode image to Base64 (still useful for other sections if needed)
+# Function to encode image to Base64
 def get_base64_image(image_path: str) -> str:
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
@@ -209,28 +209,54 @@ I have developed a series of PowerApps and Power Automate projects that have str
     st.markdown("---")
     
     # ----------------------------------------
-    # Skills Section (Dynamic Tiling)
+    # Skills Section (4 per row, uniform size)
     # ----------------------------------------
     st.title("My Skills")
 
-    # Read all images from the 'assets/skills' folder
+    # Inject custom CSS for the grid layout
+    st.markdown(
+        """
+        <style>
+        .skills-container {
+            display: grid;
+            /* 4 columns, each 150px wide, with 2rem gap between them */
+            grid-template-columns: repeat(4, 150px);
+            gap: 2rem;
+            justify-content: flex-start; /* or center if you prefer */
+        }
+        .skill-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;  /* keeps aspect ratio, shows entire image */
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .skill-img:hover {
+            transform: scale(1.1);
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Gather all skill images
     skill_folder = "assets/skills"
     skill_images = [
         f for f in os.listdir(skill_folder)
         if f.lower().endswith((".png", ".jpg", ".jpeg", ".gif"))
     ]
 
-    # Define how many columns per row
-    num_cols = 4
+    # Build the HTML for the skill images
+    skills_html = '<div class="skills-container">'
+    for img_file in skill_images:
+        img_path = os.path.join(skill_folder, img_file)
+        img_b64 = get_base64_image(img_path)
+        # You can also add alt text if you like (e.g., alt="{img_file}")
+        skills_html += f'<img class="skill-img" src="data:image/png;base64,{img_b64}" />'
+    skills_html += "</div>"
 
-    # Display images in a grid
-    for i in range(0, len(skill_images), num_cols):
-        row_images = skill_images[i:i+num_cols]
-        cols = st.columns(len(row_images))
-        for col, image_name in zip(cols, row_images):
-            image_path = os.path.join(skill_folder, image_name)
-            col.image(image_path, use_container_width=True)
-
+    st.markdown(skills_html, unsafe_allow_html=True)
+    
     st.markdown("---")
     
     # ----------------------------------------
@@ -238,7 +264,7 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # ----------------------------------------
     st.title("My Links")
     
-    # CSS for clickable image animation
+    # CSS for clickable image animation (like your links section)
     st.markdown(
         """
         <style>
