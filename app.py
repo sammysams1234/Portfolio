@@ -186,7 +186,7 @@ I developed a suite of solutions under the Pricing Automation & Process Enhancem
     with col2:
         st.write(
             """
-I have developed web applications using Streamlit, Flask and React at a basic level. Many have been personal projects - like this Portfolio site! I have also developed an application in Streamlit called Pulse Habit Tracker which allows users to track habits, manage an AI-Powered well-being journal, and a friend system for habit leaderboards. In addition, a music rating app called Track Tracker is in the works utilising Spotify's API capabilities.
+I have developed web applications using Streamlit, Flask and React at a basic level. Many have been personal projects - like this Portfolio site! I have also developed an application in Streamlit called Pulse Habit Tracker, and a music rating app called Track Tracker is in the works utilising Spotify's API capabilities - see more below. As mentioned, I have also made web applications for a chatbot and have a strong passion for software development, despite being in Data.
             """
         )
     st.markdown("---")
