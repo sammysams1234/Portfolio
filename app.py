@@ -151,9 +151,13 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write(
-            """
-I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks, transforming a challenge into an opportunity to create a robust, intelligent document scanning tool. By leveraging text vectorization for similarity searches, the application rapidly retrieves relevant information from company files based on user queries. I managed version control with GitHub, utilized Cloud Build for containerizing the application with YAML configurations and Dockerfiles, and deployed it on Cloud Run secured behind a custom company DNS. Furthermore, I implemented a weekly update pipeline with Vertex AI Kubernetes that employs Beautiful Soup and Requests to extract HTML content from Confluence pages and load the data into BigQuery, ensuring that the knowledge base remains current. The project also saw an evolution in UI frameworks, starting with Streamlit and transitioning to a more flexible solution with Flask, HTML, and CSS, all while exploring the emerging capabilities of large language models (LLMs).
-            """
+"""
+    - **Chatbot Development**: Engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks.
+    - **Document Scanning Tool**: Leveraged text vectorization for rapid similarity searches from company files.
+    - **DevOps & Deployment**: Managed version control with GitHub, containerized via Cloud Build (YAML and Dockerfiles), and deployed on Cloud Run with a custom DNS.
+    - **Automated Updates**: Created a weekly pipeline with Vertex AI Kubernetes, Beautiful Soup, and Requests to update BigQuery from Confluence pages.
+    - **UI Evolution**: Transitioned from Streamlit to a flexible Flask-based solution using HTML and CSS, while exploring LLM capabilities.        
+    """
         )
     st.markdown("---")
     
@@ -169,8 +173,9 @@ I engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebo
     with col2:
         st.write(
             """
-I developed a suite of solutions under the Pricing Automation & Process Enhancements portfolio that significantly streamlined business operations. First, I engineered an automated pricing solution using Python, which leverages Selenium and Beautiful Soup to scrape affiliate websites, structure the extracted data into a tabular format, and store it in BigQuery. This approach drastically reduced labor costs, minimized human errors, and unlocked new revenue opportunities through more informed pricing strategies. In addition, I created separate projects to further enhance internal processes: one involved developing Python scripts to automate the cleanup and organization of Confluence documentation, ensuring an up-to-date knowledge base; another focused on processing HR file data to deliver strategic insights for workforce optimization; and a third employed the Fakerr library to generate realistic synthetic datasets for testing and development, thereby enhancing system robustness while ensuring data privacy.
-            """
+    - **Automated Pricing**: Developed a Python solution using Selenium and Beautiful Soup to scrape affiliate websites, structure data into tables, and store it in BigQuery—reducing labor costs and minimizing errors.
+    - **Process Enhancements**: Automated cleanup and organization of Confluence documentation, processed HR file data for strategic insights, and generated realistic synthetic datasets with Fakerr for testing and development.
+    """
         )
     st.markdown("---")
     
@@ -185,9 +190,13 @@ I developed a suite of solutions under the Pricing Automation & Process Enhancem
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write(
-            """
-I have developed web applications using Streamlit, Flask and React at a basic level. Many have been personal projects - like this Portfolio site! I have also developed an application in Streamlit called Pulse Habit Tracker, and a music rating app called Track Tracker is in the works utilising Spotify's API capabilities - see more below. As mentioned, I have also made web applications for a chatbot and have a strong passion for software development, despite being in Data.
-            """
+    """
+    - **Diverse Web App Development**: Built applications using Streamlit, Flask, and React.
+    - **Personal Projects**: Created a Portfolio site and the Pulse Habit Tracker in Streamlit.
+    - **Ongoing Projects**: Currently developing Track Tracker, a music rating app utilizing Spotify's API.
+    - **Chatbot Development**: Experience in building web applications for a chatbot.
+    - **Passion for Software Development**: Strong enthusiasm for coding and development, complementing my data background.
+    """
         )
     st.markdown("---")
     
@@ -202,9 +211,12 @@ I have developed web applications using Streamlit, Flask and React at a basic le
             st_lottie(lottie_python, height=300)
     with col2:
         st.write(
-            """
-I have developed a series of PowerApps and Power Automate projects that have streamlined business processes and enhanced internal collaboration. In the Skills Assessment Tool Project, I built a comprehensive platform that enabled employees to self-assess their skills while managers provided objective ratings, effectively streamlining performance reviews by capturing both self-perception and managerial feedback, with data stored in SharePoint and integrated with QlikSense for advanced analysis. In the Department Shadowing Application Project, I designed an intuitive PowerApps-driven solution that facilitated cross-departmental shadowing opportunities as part of the company's people strategy, with Power Automate handling automated email confirmations and notifications to keep all stakeholders informed. Lastly, in the Value Tracker Project, I developed an integrated solution with Jira that monitors and tracks the business value of ongoing projects in real time, offering a user-friendly dashboard built on PowerApps and leveraging Power Automate for seamless data synchronization, thereby empowering decision-makers with timely insights for optimized resource allocation and strategic planning.
-            """
+    """
+    - **PowerApps & Power Automate Solutions**: Developed multiple projects that streamline processes and enhance internal collaboration.
+    - **Skills Assessment Tool**: Built a platform for employee self-assessment and managerial ratings, with data stored in SharePoint and integrated with QlikSense for analysis.
+    - **Department Shadowing App**: Designed a PowerApps solution for cross-department shadowing, with Power Automate handling email confirmations and notifications.
+    - **Value Tracker Project**: Created an integrated solution with Jira to monitor project business value in real time, featuring a PowerApps dashboard and automated data synchronization.
+    """
         )
     st.markdown("---")
     
