@@ -217,6 +217,7 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # Skills Section
     with col_left:
         st.title("My Skills")
+        # Inject CSS for skill images
         st.markdown(
             """
             <style>
@@ -257,6 +258,7 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # Contact Section
     with col_right:
         st.title("My Links")
+        # Inject CSS for horizontal layout of links
         st.markdown(
             """
             <style>
@@ -269,8 +271,9 @@ I have developed a series of PowerApps and Power Automate projects that have str
             }
             .contact-container {
                 display: flex;
-                flex-direction: column;
-                gap: 2rem;
+                flex-direction: row; /* changed from column to row */
+                gap: 2rem;           /* space between icons */
+                align-items: center; /* vertically center the icons */
             }
             </style>
             """,
@@ -296,4 +299,5 @@ I have developed a series of PowerApps and Power Automate projects that have str
         """
         st.markdown(contact_html, unsafe_allow_html=True)
 
+# Run the page
 home_page()
