@@ -210,7 +210,7 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # ----------------------------------------
     # New Section: Personal Project - Pulse Habit Tracker
     # ----------------------------------------
-    st.header("Personal Project - Pulse Habit Tracker")
+    st.title("Personal Project - Pulse Habit Tracker")
     st.image("assets/pulse_wireframe.png")
     
     st.markdown("---")
