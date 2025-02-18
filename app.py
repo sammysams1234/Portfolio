@@ -207,19 +207,14 @@ I have developed a series of PowerApps and Power Automate projects that have str
             """
         )
     st.markdown("---")
-    
     # ----------------------------------------
     # New Section: Personal Project - Pulse Habit Tracker
     # ----------------------------------------
-    st.subheader("Personal Project _ - Pulse Habit Tracker")
+    st.subheader("####Personal Project - Pulse Habit Tracker")
     st.image("assets/pulse_wireframe.png")
     
     st.markdown("---")
     
-    # ----------------------------------------
-    # Skills and Contact Sections Side by Side
-    # ----------------------------------------
-    st.markdown("---")
     col_left, col_right = st.columns(2)
     
     # Skills Section
