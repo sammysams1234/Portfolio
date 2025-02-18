@@ -246,7 +246,21 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 
     st.markdown("---")
 
-    
+        st.markdown(
+        '<h3><a href="insert-link-here" style="color: blue; text-decoration: underline;">Track Tracker Music Ratingr</a></h3>',
+        unsafe_allow_html=True
+    )
+
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.image("assets/track_tracker.png")
+    with col2:
+        st.write(
+    """
+    - **Seamless Music Tracking**: WIP
+    """
+        )
+        
     col_left, col_right = st.columns(2)
     
     # Skills Section
