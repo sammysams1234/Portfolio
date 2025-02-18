@@ -224,7 +224,6 @@ I have developed a series of PowerApps and Power Automate projects that have str
     with col1:
         st.image("assets/pulse_wireframe.png")
     with col2:
-        st.subheader("Pulse Features")
         st.write(
     """
     - **Seamless and Intuitive Experience**: Pulse is a state-of-the-art habit tracking application built using Streamlit, designed to deliver an exceptionally seamless and user-friendly experience from the very first interaction.
