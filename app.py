@@ -212,7 +212,7 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # New Section: Personal Project - Pulse Habit Tracker
     # ----------------------------------------
     st.subheader("Personal Project _ - Pulse Habit Tracker")
-    st.image("assets/pulse_wireframe.png", width=400, use_container_width=False)
+    st.image("assets/pulse_wireframe.png", use_column_width=True)
     
     st.markdown("---")
     
