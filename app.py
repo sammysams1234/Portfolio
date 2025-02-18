@@ -215,6 +215,13 @@ I have developed a series of PowerApps and Power Automate projects that have str
     st.image("assets/pulse_wireframe.png")
     
     st.markdown("---")
+
+    st.write(
+    "Pulse is a habit tracking application built with Streamlit and integrated with Google Firebase's real-time database, ensuring that all user data is securely encrypted in transit with Fernet. "
+    "The app offers an intuitive weekly planner for tracking habits alongside a comprehensive analytics page that breaks down progress by goal to keep users motivated. "
+    "Additionally, AI-powered journaling, powered by OpenAI's GPT-3.5 model, delivers personalized and inspirational summaries. "
+    "With its straightforward to-do list for organization and features that allow users to connect with friends and compete via an integrated leaderboard, Pulse is all about leveling up and achieving personal growth."
+)
     
     col_left, col_right = st.columns(2)
     
