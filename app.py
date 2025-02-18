@@ -209,6 +209,14 @@ I have developed a series of PowerApps and Power Automate projects that have str
     st.markdown("---")
     
     # ----------------------------------------
+    # New Section: Personal Project - Pulse Habit Tracker
+    # ----------------------------------------
+    st.subheader("Personal Project _ - Pulse Habit Tracker")
+    st.image("assets/pulse_wireframe.png", use_column_width=True)
+    
+    st.markdown("---")
+    
+    # ----------------------------------------
     # Skills and Contact Sections Side by Side
     # ----------------------------------------
     st.markdown("---")
@@ -271,9 +279,9 @@ I have developed a series of PowerApps and Power Automate projects that have str
             }
             .contact-container {
                 display: flex;
-                flex-direction: row; /* changed from column to row */
-                gap: 2rem;           /* space between icons */
-                align-items: center; /* vertically center the icons */
+                flex-direction: row;
+                gap: 2rem;
+                align-items: center;
             }
             </style>
             """,
