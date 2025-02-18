@@ -217,10 +217,8 @@ I have developed a series of PowerApps and Power Automate projects that have str
     st.markdown("---")
 
     st.write(
-    "Pulse is a habit tracking application built with Streamlit and integrated with Google Firebase's real-time database, ensuring that all user data is securely encrypted in transit with Fernet. "
-    "The app offers an intuitive weekly planner for tracking habits alongside a comprehensive analytics page that breaks down progress by goal to keep users motivated. "
-    "Additionally, AI-powered journaling, powered by OpenAI's GPT-3.5 model, delivers personalized and inspirational summaries. "
-    "With its straightforward to-do list for organization and features that allow users to connect with friends and compete via an integrated leaderboard, Pulse is all about leveling up and achieving personal growth."
+
+    "Pulse is a cutting-edge habit tracking application built using Streamlit, designed to provide a seamless and intuitive user experience. Integrated with Google Firebase's real-time database, the app ensures that all user data is securely stored and transmitted, with robust encryption via Fernet protecting sensitive information. At its core, Pulse features an easy-to-use weekly planner that allows users to effortlessly track their habits, while a comprehensive analytics dashboard offers detailed breakdowns by goal—empowering users to visualize their progress and stay motivated. Beyond simple tracking, Pulse incorporates AI-powered journaling that leverages OpenAI's GPT-3.5 model to generate personalized, motivational summaries, helping users reflect on their journey and gain fresh insights into their habits. Additionally, the app includes a straightforward to-do list to promote organization and productivity, reinforcing the platform's mission of continuous personal development. Recognizing the value of community, Pulse also enables users to connect with friends, share their weekly habit progress, and engage in friendly competition through an integrated leaderboard. This holistic approach not only fosters accountability but also creates a supportive environment where users can celebrate achievements and strive together to level up in all aspects of life."
 )
     
     col_left, col_right = st.columns(2)
