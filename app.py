@@ -170,6 +170,22 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     """
                 )
     st.markdown("---")
+
+    # ----------------------------------------
+    # Project: Web Apps
+    # ----------------------------------------
+    st.subheader("Web Apps")
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        lottie_webapps = load_lottieurl("https://lottie.host/0096e542-b9df-456d-b44f-4d1d144fbde4/H4ZjV93BGj.json")
+        if lottie_webapps:
+            st_lottie(lottie_webapps, height=300)
+    with col2:
+        st.write(
+    """
+    Test
+                )
+    st.markdown("---")
     
     # ----------------------------------------
     # Project: PowerApps & PowerAutomate Tools
