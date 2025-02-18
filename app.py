@@ -17,10 +17,10 @@ def get_base64_image(image_path: str) -> str:
         return base64.b64encode(img_file.read()).decode()
 
 # Set up the page configuration
-st.set_page_config(page_title="My Portfolio", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Portfolio", layout="wide", initial_sidebar_state="expanded")
 
 def home_page():
-    st.title("My Portfolio")
+    st.title("Samuel's Portfolio")
     st.subheader("About Me")
     
     # Two columns: one for the image, one for the bio text.
