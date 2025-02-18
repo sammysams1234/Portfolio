@@ -212,9 +212,10 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # Personal Project: Pulse Habit Tracker
     # ----------------------------------------
     st.markdown(
-    '<h1><a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="text-decoration: none; color: inherit;">Personal Project - Pulse Habit Tracker</a></h1>',
+    '<h1><a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Personal Project - Pulse Habit Tracker</a></h1>',
     unsafe_allow_html=True
-)
+    )
+
     st.image("assets/pulse_wireframe.png")
     
     st.markdown("---")
