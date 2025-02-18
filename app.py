@@ -152,12 +152,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.write(
 """
-    - **Chatbot Development**: Engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks.
-    - **Document Scanning Tool**: Leveraged text vectorization for rapid similarity searches from company files.
-    - **DevOps & Deployment**: Managed version control with GitHub, containerized via Cloud Build (YAML and Dockerfiles), and deployed on Cloud Run with a custom DNS.
-    - **Automated Updates**: Created a weekly pipeline with Vertex AI Kubernetes, Beautiful Soup, and Requests to update BigQuery from Confluence pages.
-    - **UI Evolution**: Transitioned from Streamlit to a flexible Flask-based solution using HTML and CSS, while exploring LLM capabilities.        
-    """
+- **Chatbot Development**: Engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks.
+- **Document Scanning Tool**: Leveraged text vectorization for rapid similarity searches from company files.
+- **DevOps & Deployment**: Managed version control with GitHub, containerized via Cloud Build (YAML and Dockerfiles), and deployed on Cloud Run with a custom DNS.
+- **Automated Updates**: Created a weekly pipeline with Vertex AI Kubernetes, Beautiful Soup, and Requests to update BigQuery from Confluence pages.
+- **UI Evolution**: Transitioned from Streamlit to a flexible Flask-based solution using HTML and CSS, while exploring LLM capabilities.        
+"""
         )
     st.markdown("---")
     
@@ -173,9 +173,9 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.write(
             """
-    - **Automated Pricing**: Developed a Python solution using Selenium and Beautiful Soup to scrape affiliate websites, structure data into tables, and store it in BigQuery—reducing labor costs and minimizing errors.
-    - **Process Enhancements**: Automated cleanup and organization of Confluence documentation, processed HR file data for strategic insights, and generated realistic synthetic datasets with Fakerr for testing and development.
-    """
+- **Automated Pricing**: Developed a Python solution using Selenium and Beautiful Soup to scrape affiliate websites, structure data into tables, and store it in BigQuery—reducing labor costs and minimizing errors.
+- **Process Enhancements**: Automated cleanup and organization of Confluence documentation, processed HR file data for strategic insights, and generated realistic synthetic datasets with Fakerr for testing and development.
+"""
         )
     st.markdown("---")
     
@@ -190,13 +190,13 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write(
-    """
-    - **Diverse Web App Development**: Built applications using Streamlit, Flask, and React.
-    - **Personal Projects**: Created a Portfolio site and the Pulse Habit Tracker in Streamlit.
-    - **Ongoing Projects**: Currently developing Track Tracker, a music rating app utilizing Spotify's API.
-    - **Chatbot Development**: Experience in building web applications for a chatbot.
-    - **Passion for Software Development**: Strong enthusiasm for coding and development, complementing my data background.
-    """
+"""
+- **Diverse Web App Development**: Built applications using Streamlit, Flask, and React.
+- **Personal Projects**: Created a Portfolio site and the Pulse Habit Tracker in Streamlit.
+- **Ongoing Projects**: Currently developing Track Tracker, a music rating app utilizing Spotify's API.
+- **Chatbot Development**: Experience in building web applications for a chatbot.
+- **Passion for Software Development**: Strong enthusiasm for coding and development, complementing my data background.
+"""
         )
     st.markdown("---")
     
@@ -211,12 +211,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_python, height=300)
     with col2:
         st.write(
-    """
-    - **PowerApps & Power Automate Solutions**: Developed multiple projects that streamline processes and enhance internal collaboration.
-    - **Skills Assessment Tool**: Built a platform for employee self-assessment and managerial ratings, with data stored in SharePoint and integrated with QlikSense for analysis.
-    - **Department Shadowing App**: Designed a PowerApps solution for cross-department shadowing, with Power Automate handling email confirmations and notifications.
-    - **Value Tracker Project**: Created an integrated solution with Jira to monitor project business value in real time, featuring a PowerApps dashboard and automated data synchronization.
-    """
+"""
+- **PowerApps & Power Automate Solutions**: Developed multiple projects that streamline processes and enhance internal collaboration.
+- **Skills Assessment Tool**: Built a platform for employee self-assessment and managerial ratings, with data stored in SharePoint and integrated with QlikSense for analysis.
+- **Department Shadowing App**: Designed a PowerApps solution for cross-department shadowing, with Power Automate handling email confirmations and notifications.
+- **Value Tracker Project**: Created an integrated solution with Jira to monitor project business value in real time, featuring a PowerApps dashboard and automated data synchronization.
+"""
         )
     st.markdown("---")
     
@@ -224,43 +224,35 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     # Personal Project: Pulse Habit Tracker
     # ----------------------------------------
     st.title("Personal Projects")
-
     st.markdown("---")
-
     st.markdown(
         '<h3><a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Pulse Habit Tracker</a></h3>',
         unsafe_allow_html=True
     )
-
     col1, col2 = st.columns([1, 2])
     with col1:
         st.image("assets/pulse_wireframe.png")
     with col2:
         st.write(
-    """
-    - **Seamless Tracking**: Pulse is a state-of-the-art habit tracker built with Streamlit that offers an intuitive weekly planner and integrated to-do list—all while keeping your data secure with Google Firebase and Fernet encryption.
-    - **Insightful Analytics & AI Journaling**: Visual dashboards track your progress, and GPT-3.5-powered journaling delivers personalized, motivational insights.
-    - **Community & Growth**: Connect with peers, share progress, and enjoy a supportive environment for collective success.
-    """
+"""
+- **Seamless Tracking**: Pulse is a state-of-the-art habit tracker built with Streamlit that offers an intuitive weekly planner and integrated to-do list—all while keeping your data secure with Google Firebase and Fernet encryption.
+- **Insightful Analytics & AI Journaling**: Visual dashboards track your progress, and GPT-3.5-powered journaling delivers personalized, motivational insights.
+- **Community & Growth**: Connect with peers, share progress, and enjoy a supportive environment for collective success.
+"""
         )
-
     st.markdown("---")
-
-        st.markdown(
-        '<h3><a href="insert-link-here" style="color: blue; text-decoration: underline;">Track Tracker Music Ratingr</a></h3>',
+    
+    # ----------------------------------------
+    # Personal Project: Track Tracker - Music Rating App
+    # ----------------------------------------
+    st.markdown(
+        '<h3><a href="insert_link_here" style="color: blue; text-decoration: underline;">Track Tracker - Music Rating App</a></h3>',
         unsafe_allow_html=True
     )
-
     col1, col2 = st.columns([1, 2])
     with col1:
-        st.image("assets/track_tracker.png")
-    with col2:
-        st.write(
-    """
-    - **Seamless Music Tracking**: WIP
-    """
-        )
-        
+        st.image("assets/pulse_wireframe.png")
+    
     col_left, col_right = st.columns(2)
     
     # Skills Section
