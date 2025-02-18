@@ -181,12 +181,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         if lottie_webapps:
             st_lottie(lottie_webapps, height=300)
     with col2:
-        st.write(
-    """
-    Test
-
-    """
-                )
+        st.write("Test")
     st.markdown("---")
     
     # ----------------------------------------
@@ -204,6 +199,33 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     I have developed a series of PowerApps and Power Automate projects that have streamlined business processes and enhanced internal collaboration. In the Skills Assessment Tool Project, I built a comprehensive platform that enabled employees to self-assess their skills while managers provided objective ratings, effectively streamlining performance reviews by capturing both self-perception and managerial feedback, with data stored in SharePoint and integrated with QlikSense for advanced analysis. In the Department Shadowing Application Project, I designed an intuitive PowerApps-driven solution that facilitated cross-departmental shadowing opportunities as part of the company’s people strategy, with Power Automate handling automated email confirmations and notifications to keep all stakeholders informed. Lastly, in the Value Tracker Project, I developed an integrated solution with Jira that monitors and tracks the business value of ongoing projects in real time, offering a user-friendly dashboard built on PowerApps and leveraging Power Automate for seamless data synchronization, thereby empowering decision-makers with timely insights for optimized resource allocation and strategic planning.
     """
         )
+    
+    st.markdown("---")
+    
+    # ----------------------------------------
+    # Skills Section with Clickable Animated Images (using Base64)
+    # ----------------------------------------
+    st.title("My Skills")
+    
+    # For now, using placeholder images. Replace these with images of your skills.
+    skill1_b64 = get_base64_image("assets/skill1.png")
+    skill2_b64 = get_base64_image("assets/skill2.png")
+    skill3_b64 = get_base64_image("assets/skill3.png")
+    
+    skills_html = f"""
+    <div class="contact-container">
+        <a href="#" target="_blank">
+            <img class="clickable-img" src="data:image/png;base64,{skill1_b64}" width="150">
+        </a>
+        <a href="#" target="_blank">
+            <img class="clickable-img" src="data:image/png;base64,{skill2_b64}" width="150">
+        </a>
+        <a href="#" target="_blank">
+            <img class="clickable-img" src="data:image/png;base64,{skill3_b64}" width="150">
+        </a>
+    </div>
+    """
+    st.markdown(skills_html, unsafe_allow_html=True)
     
     st.markdown("---")
     
@@ -231,12 +253,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     </style>
     """, unsafe_allow_html=True)
     
-    # Encode images to Base64
+    # Encode images to Base64 for contact links
     linkedin_b64 = get_base64_image("assets/linkedinlogo.png")
     github_b64 = get_base64_image("assets/githublogo.png")
     pulse_b64 = get_base64_image("assets/pulselogo.png")
     
-    # Create HTML with embedded images
+    # Create HTML with embedded images for contact links
     contact_html = f"""
     <div class="contact-container">
         <a href="https://www.linkedin.com/in/samuel-turner-b6b5b0251/" target="_blank">
