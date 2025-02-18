@@ -211,8 +211,10 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # ----------------------------------------
     # Personal Project: Pulse Habit Tracker
     # ----------------------------------------
+    st.title("Personal Projects")
+
     st.markdown(
-    '<h1>Personal Project - <a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Pulse Habit Tracker</a></h1>',
+    '<a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Pulse Habit Tracker</a></h1>',
     unsafe_allow_html=True
     )
 
