@@ -213,32 +213,33 @@ I have developed a series of PowerApps and Power Automate projects that have str
     # ----------------------------------------
     st.title("Personal Projects")
 
+    st.markdown("---")
+
     st.markdown(
-    '<h3><a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Pulse Habit Tracker</a></h3>',
-    unsafe_allow_html=True
+        '<h3><a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Pulse Habit Tracker</a></h3>',
+        unsafe_allow_html=True
     )
 
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.image("assets/pulse_wireframe.png")
+    with col2:
+        st.subheader("Pulse Features")
+        st.write(
+    """
+    - **Seamless and Intuitive Experience**: Pulse is a state-of-the-art habit tracking application built using Streamlit, designed to deliver an exceptionally seamless and user-friendly experience from the very first interaction.
+    - **Robust Security & Data Management**: Deeply integrated with Google Firebase's real-time database, every piece of user data is securely stored and transmitted using robust encryption protocols via Fernet, ensuring complete data safety and privacy.
+    - **Dynamic Weekly Planner**: At the heart of Pulse is an easy-to-navigate weekly planner that empowers users to log and monitor their daily habits. This planner not only lets you set and track specific goals but also serves as a dynamic organizational tool to promote consistency and long-term personal growth.
+    - **Comprehensive Analytics Dashboard**: Pulse features a detailed analytics dashboard that breaks down your progress by individual goals and habits. This visual representation helps identify trends, measure improvements, and keep you motivated as you watch your achievements unfold over time.
+    - **Advanced AI-Powered Journaling**: Leveraging OpenAI's GPT-3.5 model, the app offers AI-powered journaling that generates personalized, motivational summaries and reflective insights. This feature encourages deeper introspection and provides fresh perspectives to enhance your self-improvement journey.
+    - **Integrated To-Do List**: The robust to-do list is seamlessly integrated into the app, enhancing your daily organization and productivity. It reinforces the platform’s mission of continuous personal development by ensuring that all your tasks align with your habit tracking and growth objectives.
+    - **Community Engagement & Social Features**: Pulse goes beyond individual tracking by allowing users to connect with friends and peers. Share your weekly progress, engage in friendly competition via an integrated leaderboard, and experience the motivation of a supportive community striving for collective success.
+    - **Holistic Self-Improvement Platform**: Combining secure data management, insightful analytics, AI-driven journaling, and community engagement, Pulse is more than just a habit tracker. It’s a comprehensive tool designed to empower you on every step of your journey towards a more productive, fulfilling, and balanced life.
+    """
+        )
 
-    st.image("assets/pulse_wireframe.png")
-    
     st.markdown("---")
 
-    st.subheader("Pulse Features")
-
-    st.write(
-    """
-- **Seamless and Intuitive Experience**: Pulse is a state-of-the-art habit tracking application built using Streamlit, designed to deliver an exceptionally seamless and user-friendly experience from the very first interaction.
-- **Robust Security & Data Management**: Deeply integrated with Google Firebase's real-time database, every piece of user data is securely stored and transmitted using robust encryption protocols via Fernet, ensuring complete data safety and privacy.
-- **Dynamic Weekly Planner**: At the heart of Pulse is an easy-to-navigate weekly planner that empowers users to log and monitor their daily habits. This planner not only lets you set and track specific goals but also serves as a dynamic organizational tool to promote consistency and long-term personal growth.
-- **Comprehensive Analytics Dashboard**: Pulse features a detailed analytics dashboard that breaks down your progress by individual goals and habits. This visual representation helps identify trends, measure improvements, and keep you motivated as you watch your achievements unfold over time.
-- **Advanced AI-Powered Journaling**: Leveraging OpenAI's GPT-3.5 model, the app offers AI-powered journaling that generates personalized, motivational summaries and reflective insights. This feature encourages deeper introspection and provides fresh perspectives to enhance your self-improvement journey.
-- **Integrated To-Do List**: The robust to-do list is seamlessly integrated into the app, enhancing your daily organization and productivity. It reinforces the platform’s mission of continuous personal development by ensuring that all your tasks align with your habit tracking and growth objectives.
-- **Community Engagement & Social Features**: Pulse goes beyond individual tracking by allowing users to connect with friends and peers. Share your weekly progress, engage in friendly competition via an integrated leaderboard, and experience the motivation of a supportive community striving for collective success.
-- **Holistic Self-Improvement Platform**: Combining secure data management, insightful analytics, AI-driven journaling, and community engagement, Pulse is more than just a habit tracker. It’s a comprehensive tool designed to empower you on every step of your journey towards a more productive, fulfilling, and balanced life.
-    """
-    )
-
-    st.markdown("---")
     
     col_left, col_right = st.columns(2)
     
