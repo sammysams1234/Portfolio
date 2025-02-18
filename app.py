@@ -251,7 +251,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     )
     col1, col2 = st.columns([1, 2])
     with col1:
-        st.image("assets/pulse_wireframe.png")
+        st.image("assets/track_tracker.png")
     
     col_left, col_right = st.columns(2)
     
