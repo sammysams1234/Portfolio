@@ -256,19 +256,19 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     # Skills Section
     # ----------------------------------------
     st.title("My Skills")
-    # Inject CSS for skill images
+    # Inject CSS for skill images (reduced size)
     st.markdown(
         """
         <style>
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(4, 150px);
-            gap: 2rem;
+            grid-template-columns: repeat(4, 100px);
+            gap: 1rem;
             justify-content: flex-start;
         }
         .skill-img {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             object-fit: contain;
             transition: transform 0.3s ease;
             cursor: pointer;
@@ -300,7 +300,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     # Contact Section (My Links) - Placed below Skills
     # ----------------------------------------
     st.title("My Links")
-    # Inject CSS for horizontal layout of links
+    # Inject CSS for horizontal layout of links (smaller size, left aligned)
     st.markdown(
         """
         <style>
@@ -314,9 +314,9 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         .contact-container {
             display: flex;
             flex-direction: row;
-            gap: 2rem;
+            gap: 1rem;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         </style>
         """,
@@ -330,13 +330,13 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     contact_html = f"""
     <div class="contact-container">
         <a href="https://www.linkedin.com/in/samuel-turner-b6b5b0251/" target="_blank">
-            <img class="clickable-img" src="data:image/png;base64,{linkedin_b64}" width="150">
+            <img class="clickable-img" src="data:image/png;base64,{linkedin_b64}" width="100">
         </a>
         <a href="https://github.com/sammysams1234" target="_blank">
-            <img class="clickable-img" src="data:image/png;base64,{github_b64}" width="150">
+            <img class="clickable-img" src="data:image/png;base64,{github_b64}" width="100">
         </a>
         <a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" target="_blank">
-            <img class="clickable-img" src="data:image/png;base64,{pulse_b64}" width="150">
+            <img class="clickable-img" src="data:image/png;base64,{pulse_b64}" width="100">
         </a>
     </div>
     """
