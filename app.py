@@ -221,7 +221,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     st.markdown("---")
     
     # ----------------------------------------
-    # Personal Project: Pulse Habit Tracker
+    # Personal Projects
     # ----------------------------------------
     st.title("Personal Projects")
     st.markdown("---")
@@ -242,9 +242,6 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         )
     st.markdown("---")
     
-    # ----------------------------------------
-    # Personal Project: Track Tracker - Music Rating App
-    # ----------------------------------------
     st.markdown(
         '<h3><a href="insert_link_here" style="color: blue; text-decoration: underline;">Track Tracker - Music Rating App</a></h3>',
         unsafe_allow_html=True
@@ -253,92 +250,97 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col1:
         st.image("assets/track_tracker.png")
     
-    col_left, col_right = st.columns(2)
+    st.markdown("---")
     
+    # ----------------------------------------
     # Skills Section
-    with col_left:
-        st.title("My Skills")
-        # Inject CSS for skill images
-        st.markdown(
-            """
-            <style>
-            .skills-container {
-                display: grid;
-                grid-template-columns: repeat(4, 150px);
-                gap: 2rem;
-                justify-content: flex-start;
-            }
-            .skill-img {
-                width: 150px;
-                height: 150px;
-                object-fit: contain;
-                transition: transform 0.3s ease;
-                cursor: pointer;
-            }
-            .skill-img:hover {
-                transform: scale(1.1);
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-
-        skill_folder = "assets/skills"
-        skill_images = [
-            f for f in os.listdir(skill_folder)
-            if f.lower().endswith((".png", ".jpg", ".jpeg", ".gif"))
-        ]
-        skills_html = '<div class="skills-container">'
-        for img_file in skill_images:
-            img_path = os.path.join(skill_folder, img_file)
-            img_b64 = get_base64_image(img_path)
-            skills_html += f'<img class="skill-img" src="data:image/png;base64,{img_b64}" />'
-        skills_html += "</div>"
-        st.markdown(skills_html, unsafe_allow_html=True)
-    
-    # Contact Section
-    with col_right:
-        st.title("My Links")
-        # Inject CSS for horizontal layout of links
-        st.markdown(
-            """
-            <style>
-            .clickable-img {
-                transition: transform 0.3s ease;
-                cursor: pointer;
-            }
-            .clickable-img:hover {
-                transform: scale(1.1);
-            }
-            .contact-container {
-                display: flex;
-                flex-direction: row;
-                gap: 2rem;
-                align-items: center;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-        
-        linkedin_b64 = get_base64_image("assets/linkedinlogo.png")
-        github_b64 = get_base64_image("assets/githublogo.png")
-        pulse_b64 = get_base64_image("assets/pulselogo.png")
-        
-        contact_html = f"""
-        <div class="contact-container">
-            <a href="https://www.linkedin.com/in/samuel-turner-b6b5b0251/" target="_blank">
-                <img class="clickable-img" src="data:image/png;base64,{linkedin_b64}" width="150">
-            </a>
-            <a href="https://github.com/sammysams1234" target="_blank">
-                <img class="clickable-img" src="data:image/png;base64,{github_b64}" width="150">
-            </a>
-            <a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" target="_blank">
-                <img class="clickable-img" src="data:image/png;base64,{pulse_b64}" width="150">
-            </a>
-        </div>
+    # ----------------------------------------
+    st.title("My Skills")
+    # Inject CSS for skill images
+    st.markdown(
         """
-        st.markdown(contact_html, unsafe_allow_html=True)
+        <style>
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(4, 150px);
+            gap: 2rem;
+            justify-content: flex-start;
+        }
+        .skill-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .skill-img:hover {
+            transform: scale(1.1);
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    skill_folder = "assets/skills"
+    skill_images = [
+        f for f in os.listdir(skill_folder)
+        if f.lower().endswith((".png", ".jpg", ".jpeg", ".gif"))
+    ]
+    skills_html = '<div class="skills-container">'
+    for img_file in skill_images:
+        img_path = os.path.join(skill_folder, img_file)
+        img_b64 = get_base64_image(img_path)
+        skills_html += f'<img class="skill-img" src="data:image/png;base64,{img_b64}" />'
+    skills_html += "</div>"
+    st.markdown(skills_html, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # ----------------------------------------
+    # Contact Section (My Links) - Placed below Skills
+    # ----------------------------------------
+    st.title("My Links")
+    # Inject CSS for horizontal layout of links
+    st.markdown(
+        """
+        <style>
+        .clickable-img {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .clickable-img:hover {
+            transform: scale(1.1);
+        }
+        .contact-container {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    
+    linkedin_b64 = get_base64_image("assets/linkedinlogo.png")
+    github_b64 = get_base64_image("assets/githublogo.png")
+    pulse_b64 = get_base64_image("assets/pulselogo.png")
+    
+    contact_html = f"""
+    <div class="contact-container">
+        <a href="https://www.linkedin.com/in/samuel-turner-b6b5b0251/" target="_blank">
+            <img class="clickable-img" src="data:image/png;base64,{linkedin_b64}" width="150">
+        </a>
+        <a href="https://github.com/sammysams1234" target="_blank">
+            <img class="clickable-img" src="data:image/png;base64,{github_b64}" width="150">
+        </a>
+        <a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" target="_blank">
+            <img class="clickable-img" src="data:image/png;base64,{pulse_b64}" width="150">
+        </a>
+    </div>
+    """
+    st.markdown(contact_html, unsafe_allow_html=True)
 
 # Run the page
 home_page()
