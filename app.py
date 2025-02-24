@@ -136,6 +136,29 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     """
     st.markdown(timeline_html, unsafe_allow_html=True)
     
+    # ----------------------------------------
+    # Education Section
+    # ----------------------------------------
+    st.markdown("---")
+    st.title("Education")
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        # Ensure you have an image in your assets folder (e.g., education.png)
+        st.image("assets/education.png", width=300)
+    with col2:
+        st.markdown(
+            """
+**Institution:** Your University Name  
+**Degree:** Bachelor's in Digital Solutions (D&A)  
+**Duration:** 2021 - 2025  
+
+**Highlights:**
+- Completed coursework in Data Analytics, Software Engineering, and Digital Innovation.
+- Participated in hackathons and collaborative projects.
+- Engaged in extracurricular activities focused on technology and innovation.
+            """
+        )
+    
     st.markdown("---")
     
     st.title("My Projects as an Apprentice")
@@ -341,6 +364,19 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     </div>
     """
     st.markdown(contact_html, unsafe_allow_html=True)
+    
+    # ----------------------------------------
+    # Contact Me Form Section (Below My Links)
+    # ----------------------------------------
+    st.markdown("---")
+    st.title("Contact Me")
+    with st.form(key='contact_form'):
+        name = st.text_input("Your Name")
+        email = st.text_input("Your Email")
+        message = st.text_area("Your Message")
+        submit_button = st.form_submit_button(label='Send')
+        if submit_button:
+            st.success("Thank you for reaching out! I will get back to you soon.")
 
 # Run the page
 home_page()
