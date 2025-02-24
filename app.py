@@ -381,6 +381,6 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     st.markdown("---")
     st.title("Contact Me")
     st.write("My Email: rebelsrocket910@gmai.com")
-    st.write("My Contact No: 07717391987
+    st.write("My Contact No: 07717391987)
 # Run the page
 home_page()
