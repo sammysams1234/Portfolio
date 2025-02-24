@@ -208,6 +208,8 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             """
 - **Automated Pricing**: Developed a Python solution using Selenium and Beautiful Soup to scrape affiliate websites, structure data into tables, and store it in BigQuery—reducing labor costs and minimizing errors.
 - **Process Enhancements**: Automated cleanup and organization of Confluence documentation, processed HR file data for strategic insights, and generated realistic synthetic datasets with Fakerr for testing and development.
+- **Building applications**: Utilising Streamlit, Flask and other Python libraties to build apps for analytical purposes.
+- **Cyber Experimentation**: Understanding the basics of virtual machines through Python & the various techniques malicious actors use, such as KeyLogging scripts and Powershell injection.
 """
         )
     st.markdown("---")
