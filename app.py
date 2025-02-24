@@ -147,13 +147,14 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         st.image("assets/education.png", width=300)
     with col2:
         st.markdown(
-            """
-**Institution:** Denefield School
-**GCSEs:** IT, Spanish, History, Media Studies (+STEM)
-**A-Levels:** IT, Physics, Film Studies
+    """
+**Institution:** Denefield School  
+**GCSEs:** IT, Spanish, History, Media Studies (+STEM)  
+**A-Levels:** IT, Physics, Film Studies  
 **Duration:** 2015 - 2023  
-            """
-        )
+    """
+)
+
     
     st.markdown("---")
     
