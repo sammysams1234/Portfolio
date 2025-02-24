@@ -5,18 +5,11 @@ from streamlit_lottie import st_lottie
 import requests
 import streamlit.components.v1 as components
 
+# Import the PDF viewer component
+from streamlit_pdf_viewer import st_pdf_viewer
+
 # Set up the page configuration first!
 st.set_page_config(page_title="Portfolio", layout="wide", initial_sidebar_state="expanded")
-
-# Function to display a PDF
-def display_pdf(file_path):
-    with open(file_path, "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    pdf_display = f'''
-        <iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" frameborder="0">
-        </iframe>
-    '''
-    components.html(pdf_display, width=700, height=1000)
 
 # Function to load Lottie animations from a URL
 def load_lottieurl(url: str):
@@ -348,8 +341,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     st.title("Complimentary Profile")
     st.write("While the site covers the majority of this information, feel free to read more about me!")
     
-    # Display the complimentary profile PDF at the bottom of the page
-    display_pdf("assets/Samuel Turner OffBoarding Profile.pdf")
+    # ----------------------------------------
+    # Display the PDF using PDF.js viewer
+    # ----------------------------------------
+    # st_pdf_viewer() is provided by the streamlit_pdf_viewer library
+    pdf_file_path = "assets/Samuel Turner OffBoarding Profile.pdf"
+    st_pdf_viewer(pdf_file_path, height=800)
 
 # Run the page
 home_page()
