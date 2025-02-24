@@ -252,38 +252,6 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 """
         )
     st.markdown("---")
-    
-    # ----------------------------------------
-    # Personal Projects
-    # ----------------------------------------
-    st.title("Personal Projects")
-    st.markdown(
-        '<h3><a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Pulse Habit Tracker</a></h3>',
-        unsafe_allow_html=True
-    )
-    col1, col2 = st.columns([1, 2])
-    with col1:
-        st.image("assets/pulse_wireframe.png")
-    with col2:
-        st.write(
-"""
-- **Seamless Tracking**: Pulse is a state-of-the-art habit tracker built with Streamlit that offers an intuitive weekly planner and integrated to-do list—all while keeping your data secure with Google Firebase and Fernet encryption.
-- **Insightful Analytics & AI Journaling**: Visual dashboards track your progress, and GPT-3.5-powered journaling delivers personalized, motivational insights.
-- **Community & Growth**: Connect with peers, share progress, and enjoy a supportive environment for collective success.
-"""
-        )
-    st.markdown("---")
-    
-    st.markdown(
-        '<h3><a href="insert_link_here" style="color: blue; text-decoration: underline;">Track Tracker - Music Rating App</a></h3>',
-        unsafe_allow_html=True
-    )
-    col1, col2 = st.columns([1, 2])
-    with col1:
-        st.image("assets/track_tracker.png")
-    
-    st.markdown("---")
-    
     # ----------------------------------------
     # Skills Section
     # ----------------------------------------
