@@ -257,7 +257,6 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     # Personal Projects
     # ----------------------------------------
     st.title("Personal Projects")
-    st.markdown("---")
     st.markdown(
         '<h3><a href="https://pulse-habit-tracker-862b964eecd4.herokuapp.com" style="color: blue; text-decoration: underline;">Pulse Habit Tracker</a></h3>',
         unsafe_allow_html=True
