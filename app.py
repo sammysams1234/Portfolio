@@ -3,13 +3,6 @@ import base64
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
-import streamlit.components.v1 as components
-
-# Import the PDF viewer component
-from streamlit_pdf_viewer import st_pdf_viewer
-
-# Set up the page configuration first!
-st.set_page_config(page_title="Portfolio", layout="wide", initial_sidebar_state="expanded")
 
 # Function to load Lottie animations from a URL
 def load_lottieurl(url: str):
@@ -22,6 +15,9 @@ def load_lottieurl(url: str):
 def get_base64_image(image_path: str) -> str:
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
+
+# Set up the page configuration
+st.set_page_config(page_title="Portfolio", layout="wide", initial_sidebar_state="expanded")
 
 def home_page():
     st.title("Samuel's Portfolio")
@@ -52,6 +48,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         margin: 20px 0;
         padding: 20px 0;
     }
+    /* Animate the connecting line */
     .timeline::before {
         content: "";
         position: absolute;
@@ -63,10 +60,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         z-index: 0;
         animation: drawLine 1s forwards;
     }
+
     @keyframes drawLine {
         from { transform: scaleX(0); }
         to { transform: scaleX(1); }
     }
+
     .timeline .event {
         position: relative;
         text-align: center;
@@ -76,15 +75,20 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         transform: translateY(20px);
         animation: slideIn 0.5s forwards;
     }
+
+    /* Stagger the animation for each event */
     .timeline .event:nth-child(1) { animation-delay: 1s; }
     .timeline .event:nth-child(2) { animation-delay: 2s; }
     .timeline .event:nth-child(3) { animation-delay: 3s; }
+
     @keyframes slideIn {
         to {
             opacity: 1;
             transform: translateY(0);
         }
     }
+
+    /* Style the circle as a container for the year */
     .timeline .event .circle {
         width: 40px;
         height: 40px;
@@ -101,9 +105,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         transform: scale(0);
         animation: popIn 0.5s forwards;
     }
+
+    /* Stagger the circle animations to match their parent event */
     .timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
     .timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
     .timeline .event:nth-child(3) .circle { animation-delay: 0.9s; }
+
     @keyframes popIn {
         to {
             opacity: 1;
@@ -111,6 +118,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         }
     }
     </style>
+
     <div class="timeline">
       <div class="event">
         <div class="circle">2020</div>
@@ -135,29 +143,32 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     st.title("Education")
     col1, col2 = st.columns([1, 2])
     with col1:
+        # Ensure you have an image in your assets folder (e.g., education.png)
         st.image("assets/education.png", width=300)
     with col2:
         st.markdown(
-            """
+    """
 **Institution:** Denefield School  
 **GCSEs:** IT, Spanish, History, Media Studies (+STEM)  
 **A-Levels:** IT, Physics, Film Studies  
 **Duration:** 2015 - 2022
-            """
-        )
+    """
+)
         
     col1, col2 = st.columns([1, 2])
     with col1:
+        # Ensure you have an image in your assets folder (e.g., education.png)
         st.image("assets/bfc_logo.png", width=300)
     with col2:
         st.markdown(
-            """
+    """
 **Institution:** BlackPool & The Fylde College  
 **Degree:** BSC in Digital Technology Solutions, specialising in Data and Analytics  
 **Duration:** 2022 - 2025  
-            """
-        )        
+    """
+)        
 
+    
     st.markdown("---")
     
     st.title("My Projects during my time as an Apprentice")
@@ -173,13 +184,13 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write(
-            """
+"""
 - **Chatbot Development**: Engineered a production-ready chatbot using Python on Vertex AI Jupyter Notebooks.
 - **Document Scanning Tool**: Leveraged text vectorization for rapid similarity searches from company files.
 - **DevOps & Deployment**: Managed version control with GitHub, containerized via Cloud Build (YAML and Dockerfiles), and deployed on Cloud Run with a custom DNS.
 - **Automated Updates**: Created a weekly pipeline with Vertex AI Kubernetes, Beautiful Soup, and Requests to update BigQuery from Confluence pages.
-- **UI Evolution**: Transitioned from Streamlit to a flexible Flask-based solution using HTML and CSS, while exploring LLM capabilities.
-            """
+- **UI Evolution**: Transitioned from Streamlit to a flexible Flask-based solution using HTML and CSS, while exploring LLM capabilities.        
+"""
         )
     st.markdown("---")
     
@@ -199,7 +210,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 - **Process Enhancements**: Automated cleanup and organization of Confluence documentation, processed HR file data for strategic insights, and generated realistic synthetic datasets with Fakerr for testing and development.
 - **Building applications**: Utilising Streamlit, Flask and other Python libraties to build apps for analytical purposes.
 - **Cyber Experimentation**: Understanding the basics of virtual machines, how they can be used through Python, as well as the various techniques used by malicious actors, such as KeyLogging scripts and Powershell injection to steal information.
-            """
+"""
         )
     st.markdown("---")
     
@@ -214,13 +225,13 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_webapps, height=300)
     with col2:
         st.write(
-            """
+"""
 - **Diverse Web App Development**: Built applications using Streamlit, Flask, and React.
 - **Personal Projects**: Created a Portfolio site and the Pulse Habit Tracker in Streamlit.
 - **Ongoing Projects**: Currently developing Track Tracker, a music rating app utilizing Spotify's API.
 - **Chatbot Development**: Experience in building web applications for a chatbot.
 - **Passion for Software Development**: Strong enthusiasm for coding and development, complementing my data background.
-            """
+"""
         )
     st.markdown("---")
     
@@ -235,19 +246,19 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
             st_lottie(lottie_python, height=300)
     with col2:
         st.write(
-            """
+"""
 - **PowerApps & Power Automate Solutions**: Developed multiple projects that streamline processes and enhance internal collaboration.
 - **Skills Assessment Tool**: Built a platform for employee self-assessment and managerial ratings, with data stored in SharePoint and integrated with QlikSense for analysis.
 - **Department Shadowing App**: Designed a PowerApps solution for cross-department shadowing, with Power Automate handling email confirmations and notifications.
 - **Value Tracker Project**: Created an integrated solution with Jira to monitor project business value in real time, featuring a PowerApps dashboard and automated data synchronization.
-            """
+"""
         )
     st.markdown("---")
-    
     # ----------------------------------------
     # Skills Section
     # ----------------------------------------
     st.title("My Skills")
+    # Inject CSS for skill images (reduced size)
     st.markdown(
         """
         <style>
@@ -271,6 +282,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         """,
         unsafe_allow_html=True
     )
+
     skill_folder = "assets/skills"
     skill_images = [
         f for f in os.listdir(skill_folder)
@@ -287,9 +299,10 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     st.markdown("---")
     
     # ----------------------------------------
-    # Contact Section (My Links)
+    # Contact Section (My Links) - Placed below Skills
     # ----------------------------------------
     st.title("My Links")
+    # Inject CSS for horizontal layout of links (smaller size, left aligned)
     st.markdown(
         """
         <style>
@@ -311,9 +324,11 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         """,
         unsafe_allow_html=True
     )
+    
     linkedin_b64 = get_base64_image("assets/linkedinlogo.png")
     github_b64 = get_base64_image("assets/githublogo.png")
     pulse_b64 = get_base64_image("assets/pulselogo.png")
+    
     contact_html = f"""
     <div class="contact-container">
         <a href="https://www.linkedin.com/in/samuel-turner-b6b5b0251/" target="_blank">
@@ -336,17 +351,20 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     st.title("Contact Me")
     st.write("My Email: rebelsrocket910@gmai.com")
     st.write("My Contact No: 07717391987")
-    st.markdown("---")
-    
+
+    st.markdown ("---")
     st.title("Complimentary Profile")
     st.write("While the site covers the majority of this information, feel free to read more about me!")
-    
-    # ----------------------------------------
-    # Display the PDF using PDF.js viewer
-    # ----------------------------------------
-    # st_pdf_viewer() is provided by the streamlit_pdf_viewer library
-    pdf_file_path = "assets/Samuel Turner OffBoarding Profile.pdf"
-    st_pdf_viewer(pdf_file_path, height=800)
 
+    def display_pdf(file_path):
+        with open(file_path, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        pdf_display = f'''
+            <embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">
+        '''
+        st.markdown(pdf_display, unsafe_allow_html=True)
+
+    display_pdf("assets/Samuel Turner OffBoarding Profile.pdf")
+    
 # Run the page
 home_page()
