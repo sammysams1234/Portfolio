@@ -148,14 +148,10 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.markdown(
             """
-**Institution:** Your University Name  
-**Degree:** Bachelor's in Digital Solutions (D&A)  
-**Duration:** 2021 - 2025  
-
-**Highlights:**
-- Completed coursework in Data Analytics, Software Engineering, and Digital Innovation.
-- Participated in hackathons and collaborative projects.
-- Engaged in extracurricular activities focused on technology and innovation.
+**Institution:** Denefield School
+**GCSEs:** IT, Spanish, History, Media Studies (+STEM)
+**A-Levels:** IT, Physics, Film Studies
+**Duration:** 2015 - 2023  
             """
         )
     
