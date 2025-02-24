@@ -39,113 +39,109 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 
     # Horizontal animated timeline placed below the bio
     timeline_html = """
-    <style>
-    .timeline {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        margin: 20px 0;
-        padding: 20px 0;
-    }
-    /* Animate the connecting line */
-    .timeline::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        right: 5%;
-        height: 2px;
-        background: #ddd;
-        z-index: 0;
-        animation: drawLine 1s forwards;
-    }
+<style>
+.timeline {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+/* Animate the connecting line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: #ddd;
+    z-index: 0;
+    animation: drawLine 1s forwards;
+}
 
-    @keyframes drawLine {
-        from { transform: scaleX(0); }
-        to { transform: scaleX(1); }
-    }
+@keyframes drawLine {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
 
-    .timeline .event {
-        position: relative;
-        text-align: center;
-        flex: 1;
-        z-index: 1;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: slideIn 0.5s forwards;
-    }
+.timeline .event {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    z-index: 1;
+    opacity: 0;
+    /* Removed vertical translation to keep bubbles aligned */
+    transform: translateY(0);
+    animation: fadeIn 0.5s forwards;
+}
 
-    /* Stagger the animation for each event */
-    .timeline .event:nth-child(1) { animation-delay: 1s; }
-    .timeline .event:nth-child(2) { animation-delay: 1.5s; }
-    .timeline .event:nth-child(3) { animation-delay: 2s; }
-    .timeline .event:nth-child(4) { animation-delay: 2.5s; }
-    .timeline .event:nth-child(5) { animation-delay: 3s; }
+/* Stagger the fade-in animations for each event */
+.timeline .event:nth-child(1) { animation-delay: 0.5s; }
+.timeline .event:nth-child(2) { animation-delay: 1s; }
+.timeline .event:nth-child(3) { animation-delay: 1.5s; }
+.timeline .event:nth-child(4) { animation-delay: 2s; }
+.timeline .event:nth-child(5) { animation-delay: 2.5s; }
 
-    @keyframes slideIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-    /* Style the circle as a container for the year */
-    .timeline .event .circle {
-        width: 40px;
-        height: 40px;
-        background: #E60000;
-        border-radius: 50%;
-        margin: 0 auto 10px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 14px;
-        font-weight: bold;
-        opacity: 0;
-        transform: scale(0);
-        animation: popIn 0.5s forwards;
-    }
+/* Style the circle as a container for the year */
+.timeline .event .circle {
+    width: 40px;
+    height: 40px;
+    background: #E60000;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+}
 
-    /* Stagger the circle animations to match their parent event */
-    .timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
-    .timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
-    .timeline .event:nth-child(3) .circle { animation-delay: 0.9s; }
-    .timeline .event:nth-child(4) .circle { animation-delay: 1.2s; }
-    .timeline .event:nth-child(5) .circle { animation-delay: 1.5s; }
+/* Stagger the circle animations */
+.timeline .event:nth-child(1) .circle { animation-delay: 0.8s; }
+.timeline .event:nth-child(2) .circle { animation-delay: 1.3s; }
+.timeline .event:nth-child(3) .circle { animation-delay: 1.8s; }
+.timeline .event:nth-child(4) .circle { animation-delay: 2.3s; }
+.timeline .event:nth-child(5) .circle { animation-delay: 2.8s; }
 
-    @keyframes popIn {
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-    </style>
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0); }
+    to { opacity: 1; transform: scale(1); }
+}
+</style>
 
-    <div class="timeline">
-      <div class="event">
-        <div class="circle">2015</div>
-        <p>Denefield School, Reading</p>
-      </div>
-      <div class="event">
-        <div class="circle">2020</div>
-        <p>GCSE's</p>
-      </div>
-      <div class="event">
-        <div class="circle">2020</div>
-        <p>Started A Levels - Physics, Film Studies, IT</p>
-      </div>
-      <div class="event">
-        <div class="circle">2022</div>
-        <p>Started Vodafone as a Data Analyst Apprentice</p>
-      </div>
-      <div class="event">
-        <div class="circle">2025</div>
-        <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
-      </div>
-    </div>
-    """
+<div class="timeline">
+  <div class="event">
+    <div class="circle">2015</div>
+    <p>Denefield School, Reading</p>
+  </div>
+  <div class="event">
+    <div class="circle">2020</div>
+    <p>GCSE's</p>
+  </div>
+  <div class="event">
+    <div class="circle">2020</div>
+    <p>Started A Levels - Physics, Film Studies, IT</p>
+  </div>
+  <div class="event">
+    <div class="circle">2022</div>
+    <p>Started Vodafone as a Data Analyst Apprentice</p>
+  </div>
+  <div class="event">
+    <div class="circle">2025</div>
+    <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
+  </div>
+</div>
+"""
     
     st.markdown(timeline_html, unsafe_allow_html=True)
     
