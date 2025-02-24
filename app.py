@@ -41,21 +41,20 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     timeline_html = """
 <style>
 .timeline {
-    /* A set height so we can center items vertically */
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 150px;       /* Fixed height to ensure circles align properly */
     margin: 50px 0;
     display: flex;
-    justify-content: space-between; /* Even spacing between events */
-    align-items: center;           /* Vertically centers the .event container */
+    justify-content: space-between; /* Evenly distribute events horizontally */
+    align-items: center;            /* Vertically center them in the container */
 }
 
-/* The horizontal line */
+/* The horizontal line through the timeline */
 .timeline::before {
     content: "";
     position: absolute;
-    top: 50%;      /* The line sits halfway down the timeline container */
+    top: 50%;      /* Place the line at the vertical midpoint */
     left: 0;
     width: 100%;
     height: 2px;
@@ -71,18 +70,18 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 
 .event {
     position: relative;
-    flex: 1;
     text-align: center;
+    flex: 1;
     z-index: 1;
-    opacity: 0;                /* for fade-in */
+    opacity: 0;                 /* For fade-in animation */
     animation: fadeIn 0.5s forwards;
 }
 
-/* Stagger each event’s fade-in if you like */
+/* Stagger fade-in if desired */
 .event:nth-child(1) { animation-delay: 0.5s; }
-.event:nth-child(2) { animation-delay: 1s;   }
+.event:nth-child(2) { animation-delay: 1s; }
 .event:nth-child(3) { animation-delay: 1.5s; }
-.event:nth-child(4) { animation-delay: 2s;   }
+.event:nth-child(4) { animation-delay: 2s; }
 .event:nth-child(5) { animation-delay: 2.5s; }
 
 @keyframes fadeIn {
@@ -90,11 +89,10 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     to   { opacity: 1; }
 }
 
-/* The circle for each event/year */
+/* The red circle for each event (year) */
 .circle {
     position: relative;
-    /* Center the circle exactly on the timeline line */
-    top: -20px; /* half of circle’s height so it sits on the line */
+    top: -20px;   /* Lift the circle to sit on the line (half its height) */
     margin: 0 auto;
     width: 40px;
     height: 40px;
@@ -110,7 +108,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     animation: popIn 0.5s forwards;
 }
 
-/* Stagger circle pop-in if desired */
+/* Stagger circle pop-in */
 .event:nth-child(1) .circle { animation-delay: 0.7s; }
 .event:nth-child(2) .circle { animation-delay: 1.2s; }
 .event:nth-child(3) .circle { animation-delay: 1.7s; }
@@ -122,39 +120,38 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     to   { opacity: 1; transform: scale(1); }
 }
 
-/* The text under each circle */
+/* Text below each circle */
 .event p {
     margin-top: 10px;
-    max-width: 120px; /* to avoid super wide text if you prefer */
+    max-width: 120px; /* Limits the text width below the circle */
     margin-left: auto;
     margin-right: auto;
 }
 </style>
 
 <div class="timeline">
-    <div class="event">
-        <div class="circle">2015</div>
-        <p>Denefield School, Reading</p>
-    </div>
-    <div class="event">
-        <div class="circle">2020</div>
-        <p>GCSE's</p>
-    </div>
-    <div class="event">
-        <div class="circle">2020</div>
-        <p>Started A Levels – Physics, Film Studies, IT</p>
-    </div>
-    <div class="event">
-        <div class="circle">2022</div>
-        <p>Started Vodafone as a Data Analyst Apprentice</p>
-    </div>
-    <div class="event">
-        <div class="circle">2025</div>
-        <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
-    </div>
+  <div class="event">
+    <div class="circle">2015</div>
+    <p>Denefield School, Reading</p>
+  </div>
+  <div class="event">
+    <div class="circle">2020</div>
+    <p>GCSE's</p>
+  </div>
+  <div class="event">
+    <div class="circle">2020</div>
+    <p>Started A Levels - Physics, Film Studies, IT</p>
+  </div>
+  <div class="event">
+    <div class="circle">2022</div>
+    <p>Started Vodafone as a Data Analyst Apprentice</p>
+  </div>
+  <div class="event">
+    <div class="circle">2025</div>
+    <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
+  </div>
 </div>
-"""
-    
+""" 
     st.markdown(timeline_html, unsafe_allow_html=True)
     
     st.markdown("---")
