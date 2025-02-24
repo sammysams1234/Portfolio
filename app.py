@@ -78,8 +78,10 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 
     /* Stagger the animation for each event */
     .timeline .event:nth-child(1) { animation-delay: 1s; }
-    .timeline .event:nth-child(2) { animation-delay: 2s; }
-    .timeline .event:nth-child(3) { animation-delay: 3s; }
+    .timeline .event:nth-child(2) { animation-delay: 1.5s; }
+    .timeline .event:nth-child(3) { animation-delay: 2s; }
+    .timeline .event:nth-child(4) { animation-delay: 2.5s; }
+    .timeline .event:nth-child(5) { animation-delay: 3s; }
 
     @keyframes slideIn {
         to {
@@ -110,6 +112,8 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     .timeline .event:nth-child(1) .circle { animation-delay: 0.3s; }
     .timeline .event:nth-child(2) .circle { animation-delay: 0.6s; }
     .timeline .event:nth-child(3) .circle { animation-delay: 0.9s; }
+    .timeline .event:nth-child(4) .circle { animation-delay: 1.2s; }
+    .timeline .event:nth-child(5) .circle { animation-delay: 1.5s; }
 
     @keyframes popIn {
         to {
@@ -120,6 +124,14 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     </style>
 
     <div class="timeline">
+      <div class="event">
+        <div class="circle">2015</div>
+        <p>Denefield School, Reading</p>
+      </div>
+      <div class="event">
+        <div class="circle">2020</div>
+        <p>GCSE's</p>
+      </div>
       <div class="event">
         <div class="circle">2020</div>
         <p>Started A Levels - Physics, Film Studies, IT</p>
@@ -134,6 +146,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
       </div>
     </div>
     """
+    
     st.markdown(timeline_html, unsafe_allow_html=True)
     
     st.markdown("---")
