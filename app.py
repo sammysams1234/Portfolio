@@ -154,7 +154,6 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 **Duration:** 2015 - 2022
     """
 )
-        st.markdown("---")
         
     col1, col2 = st.columns([1, 2])
     with col1:
