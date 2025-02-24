@@ -380,13 +380,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     # ----------------------------------------
     st.markdown("---")
     st.title("Contact Me")
-    with st.form(key='contact_form'):
-        name = st.text_input("Your Name")
-        email = st.text_input("Your Email")
-        message = st.text_area("Your Message")
-        submit_button = st.form_submit_button(label='Send')
-        if submit_button:
-            st.success("Thank you for reaching out! I will get back to you soon.")
-
+    st.write("My Email: rebelsrocket910@gmai.com")
+    st.write("My Contact No: 07717391987
 # Run the page
 home_page()
