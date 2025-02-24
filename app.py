@@ -171,7 +171,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     
     st.markdown("---")
     
-    st.title("My Projects as an Apprentice")
+    st.title("My Projects during my time as an Apprentice")
     
     # ----------------------------------------
     # Project: E2E Gemini Document Chatbot
