@@ -122,7 +122,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     <div class="timeline">
       <div class="event">
         <div class="circle">2020</div>
-        <p>Started A-Levels</p>
+        <p>Started A-Level Education at 6th Form</p>
       </div>
       <div class="event">
         <div class="circle">2022</div>
@@ -130,7 +130,7 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
       </div>
       <div class="event">
         <div class="circle">2025</div>
-        <p>Due to graduate with a BSC Degree in Tech Solutions</p>
+        <p>Due to graduate my Apprenticeship</p>
       </div>
     </div>
     """
@@ -154,6 +154,8 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 **Duration:** 2015 - 2022
     """
 )
+        st.markdown("---")
+        
     col1, col2 = st.columns([1, 2])
     with col1:
         # Ensure you have an image in your assets folder (e.g., education.png)
@@ -161,8 +163,8 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     with col2:
         st.markdown(
     """
-**Institution:** BlackPool & The Fylde College
-**Degree:** BSC in Digital Technology Solutions, specialising in Data and Analytics 
+**Institution:** BlackPool & The Fylde College  
+**Degree:** BSC in Digital Technology Solutions, specialising in Data and Analytics  
 **Duration:** 2022 - 2025  
     """
 )        
