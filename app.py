@@ -3,6 +3,20 @@ import base64
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
+import streamlit.components.v1 as components
+
+def display_pdf(file_path):
+    with open(file_path, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    pdf_display = f'''
+        <iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" frameborder="0">
+        </iframe>
+    '''
+    components.html(pdf_display, width=700, height=1000)
+
+# Usage
+display_pdf("assets/Samuel Turner OffBoarding Profile.pdf")
+
 
 # Function to load Lottie animations from a URL
 def load_lottieurl(url: str):
@@ -360,10 +374,12 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
         with open(file_path, "rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
         pdf_display = f'''
-            <embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">
+            <iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" frameborder="0">
+            </iframe>
         '''
-        st.markdown(pdf_display, unsafe_allow_html=True)
+        components.html(pdf_display, width=700, height=1000)
 
+    # Usage
     display_pdf("assets/Samuel Turner OffBoarding Profile.pdf")
     
 # Run the page
