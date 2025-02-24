@@ -41,20 +41,23 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
     timeline_html = """
 <style>
 .timeline {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    /* A set height so we can center items vertically */
     position: relative;
-    margin: 20px 0;
-    padding: 20px 0;
+    width: 100%;
+    height: 150px;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between; /* Even spacing between events */
+    align-items: center;           /* Vertically centers the .event container */
 }
-/* Animate the connecting line */
+
+/* The horizontal line */
 .timeline::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 5%;
-    right: 5%;
+    top: 50%;      /* The line sits halfway down the timeline container */
+    left: 0;
+    width: 100%;
     height: 2px;
     background: #ddd;
     z-index: 0;
@@ -63,83 +66,92 @@ I am Samuel Turner, 20, a Level 6 Data Analyst Apprentice at Vodafone, where I h
 
 @keyframes drawLine {
     from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
+    to   { transform: scaleX(1); }
 }
 
-.timeline .event {
+.event {
     position: relative;
-    text-align: center;
     flex: 1;
+    text-align: center;
     z-index: 1;
-    opacity: 0;
-    /* Removed vertical translation to keep bubbles aligned */
-    transform: translateY(0);
+    opacity: 0;                /* for fade-in */
     animation: fadeIn 0.5s forwards;
 }
 
-/* Stagger the fade-in animations for each event */
-.timeline .event:nth-child(1) { animation-delay: 0.5s; }
-.timeline .event:nth-child(2) { animation-delay: 1s; }
-.timeline .event:nth-child(3) { animation-delay: 1.5s; }
-.timeline .event:nth-child(4) { animation-delay: 2s; }
-.timeline .event:nth-child(5) { animation-delay: 2.5s; }
+/* Stagger each event’s fade-in if you like */
+.event:nth-child(1) { animation-delay: 0.5s; }
+.event:nth-child(2) { animation-delay: 1s;   }
+.event:nth-child(3) { animation-delay: 1.5s; }
+.event:nth-child(4) { animation-delay: 2s;   }
+.event:nth-child(5) { animation-delay: 2.5s; }
 
 @keyframes fadeIn {
     from { opacity: 0; }
-    to { opacity: 1; }
+    to   { opacity: 1; }
 }
 
-/* Style the circle as a container for the year */
-.timeline .event .circle {
+/* The circle for each event/year */
+.circle {
+    position: relative;
+    /* Center the circle exactly on the timeline line */
+    top: -20px; /* half of circle’s height so it sits on the line */
+    margin: 0 auto;
     width: 40px;
     height: 40px;
     background: #E60000;
     border-radius: 50%;
-    margin: 0 auto 10px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #fff;
     font-size: 14px;
     font-weight: bold;
     opacity: 0;
     animation: popIn 0.5s forwards;
 }
 
-/* Stagger the circle animations */
-.timeline .event:nth-child(1) .circle { animation-delay: 0.8s; }
-.timeline .event:nth-child(2) .circle { animation-delay: 1.3s; }
-.timeline .event:nth-child(3) .circle { animation-delay: 1.8s; }
-.timeline .event:nth-child(4) .circle { animation-delay: 2.3s; }
-.timeline .event:nth-child(5) .circle { animation-delay: 2.8s; }
+/* Stagger circle pop-in if desired */
+.event:nth-child(1) .circle { animation-delay: 0.7s; }
+.event:nth-child(2) .circle { animation-delay: 1.2s; }
+.event:nth-child(3) .circle { animation-delay: 1.7s; }
+.event:nth-child(4) .circle { animation-delay: 2.2s; }
+.event:nth-child(5) .circle { animation-delay: 2.7s; }
 
 @keyframes popIn {
-    from { opacity: 0; transform: scale(0); }
-    to { opacity: 1; transform: scale(1); }
+    from { opacity: 0; transform: scale(0.5); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* The text under each circle */
+.event p {
+    margin-top: 10px;
+    max-width: 120px; /* to avoid super wide text if you prefer */
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
 
 <div class="timeline">
-  <div class="event">
-    <div class="circle">2015</div>
-    <p>Denefield School, Reading</p>
-  </div>
-  <div class="event">
-    <div class="circle">2020</div>
-    <p>GCSE's</p>
-  </div>
-  <div class="event">
-    <div class="circle">2020</div>
-    <p>Started A Levels - Physics, Film Studies, IT</p>
-  </div>
-  <div class="event">
-    <div class="circle">2022</div>
-    <p>Started Vodafone as a Data Analyst Apprentice</p>
-  </div>
-  <div class="event">
-    <div class="circle">2025</div>
-    <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
-  </div>
+    <div class="event">
+        <div class="circle">2015</div>
+        <p>Denefield School, Reading</p>
+    </div>
+    <div class="event">
+        <div class="circle">2020</div>
+        <p>GCSE's</p>
+    </div>
+    <div class="event">
+        <div class="circle">2020</div>
+        <p>Started A Levels – Physics, Film Studies, IT</p>
+    </div>
+    <div class="event">
+        <div class="circle">2022</div>
+        <p>Started Vodafone as a Data Analyst Apprentice</p>
+    </div>
+    <div class="event">
+        <div class="circle">2025</div>
+        <p>Due to graduate with Digital Solutions specialising in D&amp;A degree</p>
+    </div>
 </div>
 """
     
